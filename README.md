@@ -9,15 +9,15 @@ Autograder.io offers:
 - Elegant displaying of test results, including output diffs.
 - Flexible grading policy and deadline options.
 
-This repository contains the central [UI documentation]() and [issue tracker](https://github.com/eecs-autograder/autograder.io/issues) for Autograder.io.
+This repository contains the central [UI documentation](https://eecs-autograder.github.io/autograder.io/) and [issue tracker](https://github.com/eecs-autograder/autograder.io/issues) for Autograder.io.
 
 ## For Users
 If you are a new user, please read our [getting started guide]() for basic information on setting up your course and first project.
 
-If you have a question about an existing feature, please see our list of [common topics]() and our [UI documentation](). If you can't find your answer there, please contact us at help@autograder.io.
+If you have a question about an existing feature, please see our list of [common topics]() and our [UI documentation](https://eecs-autograder.github.io/autograder.io/). If you can't find your answer there, please contact us at help@autograder.io.
 
 ### Reporting Bugs and Requesting Features
-Before reporting a bug or requesting a feature, please search our [central issue tracker](https://github.com/eecs-autograder/autograder.io/issues) to see if a matching issue already exists. If not, you can either contact us at help@autograder.io or create a new issue. When using the issue tracker, please __DO NOT DISCLOSE PRIVATE STUDENT DATA__. Similarly, if you find a security issue, contact us directly rather than posting in the issue tracker.
+Before reporting a bug or requesting a feature, please search our [central issue tracker](https://github.com/eecs-autograder/autograder.io/issues) to see if a matching issue already exists. If not, you can either contact us at help@autograder.io or create a new issue in the central issue tracker. When using the issue tracker, please __DO NOT DISCLOSE PRIVATE STUDENT DATA__. Similarly, if you find a security issue, contact us directly rather than posting in the issue tracker.
 
 In your issue description, please include:
 - The output from your browser's JavaScript console (see https://webmasters.stackexchange.com/questions/8525/how-do-i-open-the-javascript-console-in-different-browsers).

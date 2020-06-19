@@ -8,7 +8,7 @@ Contributions to Autograder.io are always welcome! Autograder.io's source code i
 - [autograder-contrib](../autograder-contrib): Utilities for writing command-line applications that use the Autograder.io API.
 
 ## How do I report a bug or request a new feature?
-In general, bug and feature requests should be made by emailing help@autograder.io or by using our [central issue tracker](https://github.com/eecs-autograder/autograder.io/issues). If a lead developer suggests that you create your issue request in the issue tracker of a specific repo, then you may do so.
+In general, bug and feature requests should be made by emailing help@autograder.io or by using our [central issue tracker](https://github.com/eecs-autograder/autograder.io/issues). If a lead developer suggests that you create your issue in the issue tracker of a specific repo, then you may do so.
 
 After being discussed, issues in the central tracker will be moved or linked to parallel issues in the repositories where the bug fix or feature request will be implemented.
 
@@ -36,7 +36,7 @@ Yes! Here are a few more involved issues that we'd graciously accept help with:
 - (This list will be updated periodically)
 
 ## Can I help write documentation?
-Yes! Currently, our biggest documentation priority is filling in the gaps in our [UI documentation](). 
+Yes! Currently, our biggest documentation priority is filling in the gaps in our [UI documentation](https://eecs-autograder.github.io/autograder.io/). The markdown source code for the site can be found in the [docs folder](./docs) of this repo. Simply fork this repo, make your desired changes, and then make a pull request for your changes to be merged.
 
 ## How do I set up my development environment?
 For backend development, see the [README](https://github.com/eecs-autograder/autograder-server#server-dev-setup) in the [autograder-server repo](https://github.com/eecs-autograder/autograder-server).
