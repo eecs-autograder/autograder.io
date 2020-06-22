@@ -51,6 +51,3 @@ When contributing to the `ag-website-vue` or `ag-client-typescript` repositories
 Some repositories have additional coding standards documents beyond the language standards mentioned above:
 - [autograder-server](https://github.com/eecs-autograder/autograder-server#coding-standards)
 - [ag-website-vue](https://github.com/eecs-autograder/ag-website-vue#coding-standards)
-
-## Issue Labels
-FIXME

@@ -34,6 +34,8 @@ After being discussed, issues will be moved or linked to parallel issues in the 
 ## Contributing
 Contributions to Autograder.io are always welcome! Autograder.io's source code is divided across a handful of repositories, including the database and API backend, the website frontend, and several supporting libraries. 
 
+Contributions to the UI documentation can be made through pull requests to this repository. The source code for the UI documentation can be found in the [docs folder](./docs) of this repository.
+
 For more information on how to contribute, please read our [contributing guide](./CONTRIBUTING.md).
 
 ## Running Autograder.io on Your Own Servers
