@@ -1,0 +1,11 @@
+.wy-nav-top {
+  background: #A280AA;
+}
+
+.wy-nav-content {
+  max-width: 1000px;
+}
+
+div.contents ul.simple ul {
+  margin-left:2em;
+}
