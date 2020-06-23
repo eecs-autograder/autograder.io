@@ -1,5 +1,5 @@
-Setting Up Your Course (WIP)
-============================
+Setting Up Your Course
+======================
 
 First-time course creation
 --------------------------
