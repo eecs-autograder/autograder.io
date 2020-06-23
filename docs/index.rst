@@ -4,7 +4,7 @@ Autograder.io
 Autograder.io is an open-source automated grading system that lets programming
 instructors focus on writing high-quality test cases without worrying about
 the details of how to run them. Autograder.io is primarily developed and
-maintained at the Computer Science department of the University of Michigan, 
+maintained at the Computer Science department of the University of Michigan,
 where it supports 4600 students per semester spread across a dozen courses.
 
 .. rubric:: Autograder.io offers:
@@ -16,8 +16,8 @@ where it supports 4600 students per semester spread across a dozen courses.
 * Elegant displaying of test results, including output diffs.
 * Flexible grading policy and deadline options.
 
-This documentation is a work in progress. Contributions are welcome through 
-pull requests to our 
+This documentation is a work in progress. Contributions are welcome through
+pull requests to our
 `GitHub repository <https://github.com/eecs-autograder/autograder.io/tree/master/docs>`_.
 
 .. toctree::
@@ -30,6 +30,7 @@ pull requests to our
     :caption: Topics
 
     how_tos
+    topics/hard_and_soft_deadlines
     topics/bonus_submissions_and_late_days
     topics/custom_sandbox_images
     topics/handgrading
