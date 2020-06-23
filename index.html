@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Autograder.io - UI Docs &mdash; Autograder.io - UI Docs  documentation</title>
+  <title>Autograder.io &mdash; Autograder.io - UI Docs  documentation</title>
   
 
   
@@ -37,7 +37,8 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Setting Up Your Course" href="getting_started/set_up_course.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,11 +83,40 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Autograder.io - UI Docs</a></li>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/set_up_course.html">Setting Up Your Course</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/set_up_course.html#add-admin-and-staff-users">Add Admin and Staff Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/set_up_course.html#fill-the-student-roster">Fill the Student Roster</a></li>
 </ul>
-</div>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/create_first_project.html">Creating Your First Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#set-the-hard-and-soft-deadlines">Set the Hard and Soft Deadlines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#optional-enable-group-work">(Optional) Enable Group Work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#optional-limit-how-many-times-students-can-submit-per-day">(Optional) Limit How Many Times Students Can Submit Per Day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#upload-instructor-test-case-files">Upload Instructor Test Case Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#configure-files-students-should-submit">Configure Files Students Should Submit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="how_tos.html">How-tos and FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="how_tos.html#let-students-submit-even-if-they-re-not-in-the-roster">Let students submit even if they’re not in the roster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_tos.html#grant-an-extension">Grant an extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_tos.html#edit-group-members-or-merge-two-groups">Edit group members or merge two groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_tos.html#rerun-a-test-case-or-submission">Rerun a test case or submission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_tos.html#why-do-i-get-permission-denied-when-i-run-my-script-with-my-script-sh">Why do I get “permission denied” when I run my script with <code class="docutils literal notranslate"><span class="pre">./my_script.sh</span></code>?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="topics/bonus_submissions_and_late_days.html">“Bonus Submission” and “Late Day” Tokens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/custom_sandbox_images.html">Building Custom Sandbox Images (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/handgrading.html">Style Grading by Hand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/mutation_testing.html">Evaluating Student Test Cases with Mutation Testing</a></li>
+</ul>
+
             
           
         </div>
@@ -131,7 +161,7 @@
     
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Autograder.io - UI Docs</li>
+      <li>Autograder.io</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -143,13 +173,20 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="getting_started/set_up_course.html" class="btn btn-neutral float-right" title="Setting Up Your Course" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="autograder-io-ui-docs">
-<h1>Autograder.io - UI Docs<a class="headerlink" href="#autograder-io-ui-docs" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="autograder-io">
+<h1>Autograder.io<a class="headerlink" href="#autograder-io" title="Permalink to this headline">¶</a></h1>
 <p>Autograder.io is an open-source automated grading system that lets programming
 instructors focus on writing high-quality test cases without worrying about
 the details of how to run them. Autograder.io is primarily developed and
@@ -164,6 +201,46 @@ where it supports 4600 students per semester spread across a dozen courses.</p>
 <li><p>Elegant displaying of test results, including output diffs.</p></li>
 <li><p>Flexible grading policy and deadline options.</p></li>
 </ul>
+<p>This documentation is a work in progress. Contributions are welcome through
+pull requests to our
+<a class="reference external" href="https://github.com/eecs-autograder/autograder.io/tree/master/docs">GitHub repository</a>.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/set_up_course.html">Setting Up Your Course</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/set_up_course.html#add-admin-and-staff-users">Add Admin and Staff Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/set_up_course.html#fill-the-student-roster">Fill the Student Roster</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/create_first_project.html">Creating Your First Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#set-the-hard-and-soft-deadlines">Set the Hard and Soft Deadlines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#optional-enable-group-work">(Optional) Enable Group Work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#optional-limit-how-many-times-students-can-submit-per-day">(Optional) Limit How Many Times Students Can Submit Per Day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#upload-instructor-test-case-files">Upload Instructor Test Case Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#configure-files-students-should-submit">Configure Files Students Should Submit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/create_first_project.html#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="how_tos.html">How-tos and FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="how_tos.html#let-students-submit-even-if-they-re-not-in-the-roster">Let students submit even if they’re not in the roster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_tos.html#grant-an-extension">Grant an extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_tos.html#edit-group-members-or-merge-two-groups">Edit group members or merge two groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_tos.html#rerun-a-test-case-or-submission">Rerun a test case or submission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_tos.html#why-do-i-get-permission-denied-when-i-run-my-script-with-my-script-sh">Why do I get “permission denied” when I run my script with <code class="docutils literal notranslate"><span class="pre">./my_script.sh</span></code>?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="topics/bonus_submissions_and_late_days.html">“Bonus Submission” and “Late Day” Tokens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/custom_sandbox_images.html">Building Custom Sandbox Images (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/handgrading.html">Style Grading by Hand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/mutation_testing.html">Evaluating Student Test Cases with Mutation Testing</a></li>
+</ul>
+</div>
 </div>
 
 
@@ -171,6 +248,13 @@ where it supports 4600 students per semester spread across a dozen courses.</p>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="getting_started/set_up_course.html" class="btn btn-neutral float-right" title="Setting Up Your Course" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
   
 
   <hr/>
