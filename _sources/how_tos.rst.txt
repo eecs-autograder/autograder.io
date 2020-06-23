@@ -1,5 +1,5 @@
-How-tos and FAQ
-===============
+How-tos and FAQ (WIP)
+=====================
 
 Let students submit even if they're not in the roster
 -----------------------------------------------------
