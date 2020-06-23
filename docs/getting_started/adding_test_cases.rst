@@ -5,6 +5,12 @@ listed below. Please create copies of these files on your local machine as
 you follow this guide.
 
 
+Upload Instructor Test Case Files
+---------------------------------
+
+Configure Files Students Should Submit
+--------------------------------------
+
 Create a Test Suite with C++ Output Tests
 -----------------------------------------
 
