@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Setting Up Your Course (WIP) &mdash; Autograder.io - UI Docs  documentation</title>
+  <title>Setting Up Your Course &mdash; Autograder.io - UI Docs  documentation</title>
   
 
   
@@ -86,9 +86,10 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Setting Up Your Course (WIP)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#add-admin-and-staff-users">Add Admin and Staff Users</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#fill-the-student-roster">Fill the Student Roster</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setting Up Your Course</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#first-time-course-creation">First-time course creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#copying-a-course-from-a-previous-term">Copying a Course from a Previous Term</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-admin-staff-and-student-users">Add Admin, Staff, and Student Users</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="create_first_project.html">Creating Your First Project (WIP)</a><ul>
@@ -99,17 +100,27 @@
 <li class="toctree-l2"><a class="reference internal" href="create_first_project.html#configure-files-students-should-submit">Configure Files Students Should Submit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="create_first_project.html#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
 <li class="toctree-l2"><a class="reference internal" href="create_first_project.html#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#make-a-submission-and-check-the-feedback">Make a Submission and Check the Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#publish-the-project">Publish the Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Topics</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../how_tos.html">How-tos and FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#let-students-submit-even-if-they-re-not-in-the-roster">Let students submit even if they’re not in the roster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how_tos.html">How-tos and FAQ (WIP)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#cloning-a-course-or-project-for-a-new-term">Cloning a Course or Project for a New Term</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#let-students-submit-even-if-they-re-not-in-the-roster">Let students submit even if they’re not in the roster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../how_tos.html#restrict-guests-to-your-email-domain-optional-once-per-course">1. Restrict guests to your email domain (Optional, once per course)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how_tos.html#enable-the-anyone-with-the-link-can-submit-project-option">2. Enable the “Anyone with the link can submit” project option</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#grant-an-extension">Grant an extension</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#edit-group-members-or-merge-two-groups">Edit group members or merge two groups</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#rerun-a-test-case-or-submission">Rerun a test case or submission</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#why-do-i-get-permission-denied-when-i-run-my-script-with-my-script-sh">Why do I get “permission denied” when I run my script with <code class="docutils literal notranslate"><span class="pre">./my_script.sh</span></code>?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#can-i-use-matlab">Can I use MATLAB?</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../topics/bonus_submissions_and_late_days.html">“Bonus Submission” and “Late Day” Tokens (WIP)</a></li>
@@ -162,7 +173,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Setting Up Your Course (WIP)</li>
+      <li>Setting Up Your Course</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -188,13 +199,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="setting-up-your-course-wip">
-<h1>Setting Up Your Course (WIP)<a class="headerlink" href="#setting-up-your-course-wip" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="add-admin-and-staff-users">
-<h2>Add Admin and Staff Users<a class="headerlink" href="#add-admin-and-staff-users" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="setting-up-your-course">
+<h1>Setting Up Your Course<a class="headerlink" href="#setting-up-your-course" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="first-time-course-creation">
+<h2>First-time course creation<a class="headerlink" href="#first-time-course-creation" title="Permalink to this headline">¶</a></h2>
+<p>If you are creating a course for the first time, contact <cite>help&#64;autograder.io</cite>
+(or your system administrator if running on your institution’s servers)
+for assistance.</p>
 </div>
-<div class="section" id="fill-the-student-roster">
-<h2>Fill the Student Roster<a class="headerlink" href="#fill-the-student-roster" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="copying-a-course-from-a-previous-term">
+<h2>Copying a Course from a Previous Term<a class="headerlink" href="#copying-a-course-from-a-previous-term" title="Permalink to this headline">¶</a></h2>
+<p>To copy a course from a previous term, click the “copy” icon for the course you want to clone.</p>
+<img alt="../_images/landing_page_copy.png" src="../_images/landing_page_copy.png" />
+</div>
+<div class="section" id="add-admin-staff-and-student-users">
+<h2>Add Admin, Staff, and Student Users<a class="headerlink" href="#add-admin-staff-and-student-users" title="Permalink to this headline">¶</a></h2>
+<p>Click the gear icon for your new course to enter the course admin page.</p>
+<img alt="../_images/landing_page_gear.png" src="../_images/landing_page_gear.png" />
+<p>Next, hover over the “Roster” tab and click on one of the roles listed in the
+dropdown menu. The roles are as follows:</p>
+<ul class="simple">
+<li><p><strong>Admin</strong>: Admins have full edit permissions for the course.
+That includes changing user permissions, editing projects and test cases, etc.
+Admins can also look up students’ submissions with any feedback level.
+Admins also have the same privileges as staff users.</p></li>
+<li><p><strong>Staff</strong>: Staff can submit their own code unlimited times with maximum feedback.
+Staff can look up students’ submissions, but with restricted feedback as configured by admins.</p></li>
+<li><p><strong>Student</strong>: Students can view and submit to all published projects in the course.
+The can also form groups with other students (where allowed by the project settings).</p></li>
+<li><p><strong>Handgrader</strong>: Handgraders can access the handgrading interface for projects
+in the course and therefore grade students’ submissions according to a rubric
+configured by admins.</p></li>
+</ul>
+<p>Any user with none of the roles listed above is considered a guest.
+Guests can only access projects that are configured to allow guests,
+and can only form groups with other guests.</p>
+<p>To add users to the roster you selected, paste a newline-separated list of
+<strong>email addresses</strong> into the text box and click “Add to Roster”.</p>
+<img alt="../_images/roster.png" src="../_images/roster.png" />
 </div>
 </div>
 
