@@ -25,6 +25,11 @@ Create a Test Suite with C++ Output Tests
 Create a Test Suite with Python Unit Tests
 ------------------------------------------
 
+Make a Submission and Check the Feedback
+----------------------------------------
 
+Publish the Project
+-------------------
 
-
+Downloading Grades and Submitted Files
+--------------------------------------

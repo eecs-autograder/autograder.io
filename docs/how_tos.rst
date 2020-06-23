@@ -1,6 +1,9 @@
 How-tos and FAQ (WIP)
 =====================
 
+Downloading Grades and Submitted Files
+--------------------------------------
+
 Let students submit even if they're not in the roster
 -----------------------------------------------------
 
