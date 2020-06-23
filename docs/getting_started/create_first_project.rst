@@ -1,5 +1,5 @@
-Creating Your First Project
-===========================
+Creating Your First Project (WIP)
+=================================
 
 Set the Hard and Soft Deadlines
 -------------------------------

@@ -1,5 +1,5 @@
-Setting Up Your Course
-=======================
+Setting Up Your Course (WIP)
+============================
 
 Add Admin and Staff Users
 -------------------------
