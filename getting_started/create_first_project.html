@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Creating Your First Project (WIP) &mdash; Autograder.io - UI Docs  documentation</title>
+  <title>Creating Your First Project &mdash; Autograder.io - UI Docs  documentation</title>
   
 
   
@@ -38,7 +38,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="How-tos and FAQ (WIP)" href="../how_tos.html" />
+    <link rel="next" title="Adding Test Cases to Your Project" href="adding_test_cases.html" />
     <link rel="prev" title="Setting Up Your Course" href="set_up_course.html" /> 
 </head>
 
@@ -92,25 +92,31 @@
 <li class="toctree-l2"><a class="reference internal" href="set_up_course.html#add-admin-staff-and-student-users">Add Admin, Staff, and Student Users</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating Your First Project (WIP)</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating Your First Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#set-the-hard-and-soft-deadlines">Set the Hard and Soft Deadlines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#optional-enable-group-work">(Optional) Enable Group Work</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#optional-limit-how-many-times-students-can-submit-per-day">(Optional) Limit How Many Times Students Can Submit Per Day</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#upload-instructor-test-case-files">Upload Instructor Test Case Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configure-files-students-should-submit">Configure Files Students Should Submit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#make-a-submission-and-check-the-feedback">Make a Submission and Check the Feedback</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#publish-the-project">Publish the Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-limit-how-many-times-students-can-submit-per-day">(Optional) Limit How Many Times Students Can Submit Per Day</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#set-the-timezone-for-reset-submissions-per-day-at-to-your-local-timezone">Set the timezone for “Reset submissions per day at” to your local timezone</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#choose-a-grading-policy-best-or-most-recent-submission">Choose a Grading Policy (Best or Most Recent Submission)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="adding_test_cases.html">Adding Test Cases to Your Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#upload-instructor-test-case-files">Upload Instructor Test Case Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#configure-files-students-should-submit">Configure Files Students Should Submit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#make-a-submission-and-check-the-feedback">Make a Submission and Check the Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#publish-the-project">Publish the Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Topics</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../how_tos.html">How-tos and FAQ (WIP)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#cloning-a-course-or-project-for-a-new-term">Cloning a Course or Project for a New Term</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#clone-a-course-or-project-for-a-new-term">Clone a Course or Project for a New Term</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#let-students-submit-even-if-they-re-not-in-the-roster">Let students submit even if they’re not in the roster</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../how_tos.html#restrict-guests-to-your-email-domain-optional-once-per-course">1. Restrict guests to your email domain (Optional, once per course)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../how_tos.html#enable-the-anyone-with-the-link-can-submit-project-option">2. Enable the “Anyone with the link can submit” project option</a></li>
@@ -123,6 +129,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#can-i-use-matlab">Can I use MATLAB?</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/hard_and_soft_deadlines.html">Hard &amp; Soft Deadlines: Recommendations and Implications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../topics/bonus_submissions_and_late_days.html">“Bonus Submission” and “Late Day” Tokens (WIP)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../topics/custom_sandbox_images.html">Building Custom Sandbox Images with Docker (WIP)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../topics/handgrading.html">Style Grading by Hand (WIP)</a></li>
@@ -173,7 +180,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Creating Your First Project (WIP)</li>
+      <li>Creating Your First Project</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -187,7 +194,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="../how_tos.html" class="btn btn-neutral float-right" title="How-tos and FAQ (WIP)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="adding_test_cases.html" class="btn btn-neutral float-right" title="Adding Test Cases to Your Project" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="set_up_course.html" class="btn btn-neutral float-left" title="Setting Up Your Course" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -199,37 +206,67 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="creating-your-first-project-wip">
-<h1>Creating Your First Project (WIP)<a class="headerlink" href="#creating-your-first-project-wip" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="creating-your-first-project">
+<h1>Creating Your First Project<a class="headerlink" href="#creating-your-first-project" title="Permalink to this headline">¶</a></h1>
+<p>In the admin page for your course, click on the Projects tab.
+Then, enter the name for your new project and click “Add Project”.</p>
+<img alt="../_images/create_project.png" src="../_images/create_project.png" />
 <div class="section" id="set-the-hard-and-soft-deadlines">
 <h2>Set the Hard and Soft Deadlines<a class="headerlink" href="#set-the-hard-and-soft-deadlines" title="Permalink to this headline">¶</a></h2>
+<p>Autograder.io provides two deadline settings:</p>
+<ul class="simple">
+<li><p><strong>Hard Deadline</strong>: After this passes,
+<strong>students will no longer be able to submit their code.</strong>
+Unlike the soft deadline, this value is <strong>hidden from students and staff</strong>.
+If late day tokens are allowed, submitting after this deadline will
+automatically use those tokens as appropriate.</p></li>
+<li><p><strong>Soft Deadline</strong>: This is the deadline that is <strong>shown to students</strong>.
+It does NOT affect students’ ability to submit their code and will not
+cause late day tokens to be used.</p></li>
+</ul>
+<p>Set these deadlines to your desired values, or leave them blank if you prefer.</p>
+<img alt="../_images/deadlines.gif" src="../_images/deadlines.gif" />
 </div>
 <div class="section" id="optional-enable-group-work">
 <h2>(Optional) Enable Group Work<a class="headerlink" href="#optional-enable-group-work" title="Permalink to this headline">¶</a></h2>
+<p>Autograder.io supports students working and submitting together in groups.
+Students in a group will be able to see each other’s submissions along with
+their own combined seamlessly into one list.</p>
+<img alt="../_images/group_size.png" src="../_images/group_size.png" />
+<p>To disable group work, set the min and max group size to 1 (this is the default).</p>
+<p>When group work is enablead and students visit the project submission page for
+the first time, they will be prompted to send an invitation to the student(s)
+they wish to be in a group with. Those students must then visit the project
+submission page and accept the invitation.</p>
 </div>
 <div class="section" id="optional-limit-how-many-times-students-can-submit-per-day">
 <h2>(Optional) Limit How Many Times Students Can Submit Per Day<a class="headerlink" href="#optional-limit-how-many-times-students-can-submit-per-day" title="Permalink to this headline">¶</a></h2>
+<p>You can choose to limit the number of times an individual student or group can
+submit per day. By default, an individual student will get the same number of
+submissions per day as a group (you can override this by checking the
+“Groups get more submissions than individuals” box).</p>
+<p>Once you set a limit, you have two choices for how the limit is enforced:</p>
+<ol class="arabic simple">
+<li><p><strong>A hard cutoff</strong>: Students will not be able to submit for the rest of
+the day once they hit the submission limit.</p></li>
+<li><p><strong>A soft cutoff</strong>: Students can continue to submit, but they will only
+see reduced feedback for those submissions.</p></li>
+</ol>
+<p>For soft cutoff, check the “Allow submissions past limit” box.
+For a hard cutoff, uncheck it.</p>
+<img alt="../_images/allow_past_limit.png" src="../_images/allow_past_limit.png" />
+<div class="section" id="set-the-timezone-for-reset-submissions-per-day-at-to-your-local-timezone">
+<h3>Set the timezone for “Reset submissions per day at” to your local timezone<a class="headerlink" href="#set-the-timezone-for-reset-submissions-per-day-at-to-your-local-timezone" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/submission_reset_timezone.png" src="../_images/submission_reset_timezone.png" />
 </div>
-<div class="section" id="upload-instructor-test-case-files">
-<h2>Upload Instructor Test Case Files<a class="headerlink" href="#upload-instructor-test-case-files" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="configure-files-students-should-submit">
-<h2>Configure Files Students Should Submit<a class="headerlink" href="#configure-files-students-should-submit" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="create-a-test-suite-with-c-output-tests">
-<h2>Create a Test Suite with C++ Output Tests<a class="headerlink" href="#create-a-test-suite-with-c-output-tests" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="create-a-test-suite-with-python-unit-tests">
-<h2>Create a Test Suite with Python Unit Tests<a class="headerlink" href="#create-a-test-suite-with-python-unit-tests" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="make-a-submission-and-check-the-feedback">
-<h2>Make a Submission and Check the Feedback<a class="headerlink" href="#make-a-submission-and-check-the-feedback" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="publish-the-project">
-<h2>Publish the Project<a class="headerlink" href="#publish-the-project" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="downloading-grades-and-submitted-files">
-<h2>Downloading Grades and Submitted Files<a class="headerlink" href="#downloading-grades-and-submitted-files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="choose-a-grading-policy-best-or-most-recent-submission">
+<h2>Choose a Grading Policy (Best or Most Recent Submission)<a class="headerlink" href="#choose-a-grading-policy-best-or-most-recent-submission" title="Permalink to this headline">¶</a></h2>
+<p>Choose whether to use students’ best or most recent submission for their
+final project grade. We recommend taking the <em>best</em> submission when using the
+<em>hard cutoff</em> for submission limits or taking the <em>most recent</em> submission when
+using the <em>soft cutoff</em>.</p>
+<img alt="../_images/grading_policy.png" src="../_images/grading_policy.png" />
 </div>
 </div>
 
@@ -241,7 +278,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../how_tos.html" class="btn btn-neutral float-right" title="How-tos and FAQ (WIP)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="adding_test_cases.html" class="btn btn-neutral float-right" title="Adding Test Cases to Your Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="set_up_course.html" class="btn btn-neutral float-left" title="Setting Up Your Course" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
