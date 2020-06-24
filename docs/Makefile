@@ -14,3 +14,5 @@ publish: all
 
 clean:
 	rm -rvf $(SPHINX_OUT_DIR)
+
+.PHONY: sphinx clean
