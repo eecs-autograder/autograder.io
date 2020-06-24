@@ -18,7 +18,7 @@ field to that email domain.
 
 First, navigate to the admin page for your course.
 
-.. image:: /pics/landing_page_gear.png
+.. image:: /pics/set_up_course/landing_page_gear.png
 
 Then set the "Guest usernames must end with" field to your institution's email
 domain.
