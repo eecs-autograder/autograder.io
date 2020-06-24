@@ -40,6 +40,10 @@ the files **test_math_funcs.py**, **print_words_test_1.in**,
 
 Configure Files Students Should Submit
 --------------------------------------
+Click on the "Student Files" tab and add **math_funcs.py** and
+**student_solution.cpp** as expected student files.
+
+.. image:: /pics/adding_test_cases/expected_student_files.gif
 
 Create a Test Suite with Python Unit Tests
 ------------------------------------------
