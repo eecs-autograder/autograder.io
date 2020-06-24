@@ -1,9 +1,11 @@
 Creating Your First Project
-=================================
+===========================
 In the admin page for your course, click on the Projects tab.
 Then, enter the name for your new project and click "Add Project".
+Once the project has been created, click on the gear icon to go to the
+project admin page.
 
-.. image:: /pics/create_project.png
+.. image:: /pics/create_first_project/create_project.gif
 
 
 Set the Hard and Soft Deadlines
@@ -21,7 +23,7 @@ Autograder.io provides two deadline settings:
 
 Set these deadlines to your desired values, or leave them blank if you prefer.
 
-.. image:: /pics/deadlines.gif
+.. image:: /pics/create_first_project/deadlines.gif
 
 (Optional) Enable Group Work
 ----------------------------
@@ -29,7 +31,7 @@ Autograder.io supports students working and submitting together in groups.
 Students in a group will be able to see each other's submissions along with
 their own combined seamlessly into one list.
 
-.. image:: /pics/group_size.png
+.. image:: /pics/create_first_project/group_size.png
 
 To disable group work, set the min and max group size to 1 (this is the default).
 
@@ -55,12 +57,12 @@ Once you set a limit, you have two choices for how the limit is enforced:
 For soft cutoff, check the "Allow submissions past limit" box.
 For a hard cutoff, uncheck it.
 
-.. image:: /pics/allow_past_limit.png
+.. image:: /pics/create_first_project/allow_past_limit.png
 
 Set the timezone for "Reset submissions per day at" to your local timezone
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: /pics/submission_reset_timezone.png
+.. image:: /pics/create_first_project/submission_reset_timezone.png
 
 Choose a Grading Policy (Best or Most Recent Submission)
 --------------------------------------------------------
@@ -69,4 +71,4 @@ final project grade. We recommend taking the *best* submission when using the
 *hard cutoff* for submission limits or taking the *most recent* submission when
 using the *soft cutoff*.
 
-.. image:: /pics/grading_policy.png
+.. image:: /pics/create_first_project/grading_policy.png

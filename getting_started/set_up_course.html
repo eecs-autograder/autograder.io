@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="../_static/style-extra.css" type="text/css" />
 
   
@@ -31,6 +32,8 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
         <script src="../_static/js-extra.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -38,7 +41,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Creating Your First Project (WIP)" href="create_first_project.html" />
+    <link rel="next" title="Creating Your First Project" href="create_first_project.html" />
     <link rel="prev" title="Autograder.io" href="../index.html" /> 
 </head>
 
@@ -92,25 +95,31 @@
 <li class="toctree-l2"><a class="reference internal" href="#add-admin-staff-and-student-users">Add Admin, Staff, and Student Users</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="create_first_project.html">Creating Your First Project (WIP)</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="create_first_project.html">Creating Your First Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="create_first_project.html#set-the-hard-and-soft-deadlines">Set the Hard and Soft Deadlines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="create_first_project.html#optional-enable-group-work">(Optional) Enable Group Work</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#optional-limit-how-many-times-students-can-submit-per-day">(Optional) Limit How Many Times Students Can Submit Per Day</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#upload-instructor-test-case-files">Upload Instructor Test Case Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#configure-files-students-should-submit">Configure Files Students Should Submit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#make-a-submission-and-check-the-feedback">Make a Submission and Check the Feedback</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#publish-the-project">Publish the Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#optional-limit-how-many-times-students-can-submit-per-day">(Optional) Limit How Many Times Students Can Submit Per Day</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="create_first_project.html#set-the-timezone-for-reset-submissions-per-day-at-to-your-local-timezone">Set the timezone for “Reset submissions per day at” to your local timezone</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#choose-a-grading-policy-best-or-most-recent-submission">Choose a Grading Policy (Best or Most Recent Submission)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="adding_test_cases.html">Adding Test Cases to Your Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#upload-instructor-test-case-files">Upload Instructor Test Case Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#configure-files-students-should-submit">Configure Files Students Should Submit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#make-a-submission-and-check-the-feedback">Make a Submission and Check the Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#publish-the-project">Publish the Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Topics</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../how_tos.html">How-tos and FAQ (WIP)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#cloning-a-course-or-project-for-a-new-term">Cloning a Course or Project for a New Term</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#clone-a-course-or-project-for-a-new-term">Clone a Course or Project for a New Term</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#let-students-submit-even-if-they-re-not-in-the-roster">Let students submit even if they’re not in the roster</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../how_tos.html#restrict-guests-to-your-email-domain-optional-once-per-course">1. Restrict guests to your email domain (Optional, once per course)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../how_tos.html#enable-the-anyone-with-the-link-can-submit-project-option">2. Enable the “Anyone with the link can submit” project option</a></li>
@@ -123,6 +132,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#can-i-use-matlab">Can I use MATLAB?</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/hard_and_soft_deadlines.html">Hard &amp; Soft Deadlines: Recommendations and Implications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../topics/bonus_submissions_and_late_days.html">“Bonus Submission” and “Late Day” Tokens (WIP)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../topics/custom_sandbox_images.html">Building Custom Sandbox Images with Docker (WIP)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../topics/handgrading.html">Style Grading by Hand (WIP)</a></li>
@@ -187,7 +197,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="create_first_project.html" class="btn btn-neutral float-right" title="Creating Your First Project (WIP)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="create_first_project.html" class="btn btn-neutral float-right" title="Creating Your First Project" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral float-left" title="Autograder.io" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -236,7 +246,7 @@ Guests can only access projects that are configured to allow guests,
 and can only form groups with other guests.</p>
 <p>To add users to the roster you selected, paste a newline-separated list of
 <strong>email addresses</strong> into the text box and click “Add to Roster”.</p>
-<img alt="../_images/roster.png" src="../_images/roster.png" />
+<img alt="../_images/roster.gif" src="../_images/roster.gif" />
 </div>
 </div>
 
@@ -248,7 +258,7 @@ and can only form groups with other guests.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="create_first_project.html" class="btn btn-neutral float-right" title="Creating Your First Project (WIP)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="create_first_project.html" class="btn btn-neutral float-right" title="Creating Your First Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral float-left" title="Autograder.io" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

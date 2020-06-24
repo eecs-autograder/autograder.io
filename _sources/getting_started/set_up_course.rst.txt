@@ -11,13 +11,13 @@ Copying a Course from a Previous Term
 -------------------------------------
 To copy a course from a previous term, click the "copy" icon for the course you want to clone.
 
-.. image:: /pics/landing_page_copy.png
+.. image:: /pics/set_up_course/landing_page_copy.png
 
 Add Admin, Staff, and Student Users
 -----------------------------------
 Click the gear icon for your new course to enter the course admin page.
 
-.. image:: /pics/landing_page_gear.png
+.. image:: /pics/set_up_course/landing_page_gear.png
 
 Next, hover over the "Roster" tab and click on one of the roles listed in the
 dropdown menu. The roles are as follows:
@@ -41,4 +41,4 @@ and can only form groups with other guests.
 To add users to the roster you selected, paste a newline-separated list of
 **email addresses** into the text box and click "Add to Roster".
 
-.. image:: /pics/roster.png
+.. image:: /pics/set_up_course/roster.gif

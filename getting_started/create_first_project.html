@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="../_static/style-extra.css" type="text/css" />
 
   
@@ -31,6 +32,8 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
         <script src="../_static/js-extra.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -105,8 +108,8 @@
 <li class="toctree-l1"><a class="reference internal" href="adding_test_cases.html">Adding Test Cases to Your Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#upload-instructor-test-case-files">Upload Instructor Test Case Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#configure-files-students-should-submit">Configure Files Students Should Submit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#make-a-submission-and-check-the-feedback">Make a Submission and Check the Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#publish-the-project">Publish the Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adding_test_cases.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
@@ -209,8 +212,10 @@
   <div class="section" id="creating-your-first-project">
 <h1>Creating Your First Project<a class="headerlink" href="#creating-your-first-project" title="Permalink to this headline">¶</a></h1>
 <p>In the admin page for your course, click on the Projects tab.
-Then, enter the name for your new project and click “Add Project”.</p>
-<img alt="../_images/create_project.png" src="../_images/create_project.png" />
+Then, enter the name for your new project and click “Add Project”.
+Once the project has been created, click on the gear icon to go to the
+project admin page.</p>
+<img alt="../_images/create_project.gif" src="../_images/create_project.gif" />
 <div class="section" id="set-the-hard-and-soft-deadlines">
 <h2>Set the Hard and Soft Deadlines<a class="headerlink" href="#set-the-hard-and-soft-deadlines" title="Permalink to this headline">¶</a></h2>
 <p>Autograder.io provides two deadline settings:</p>

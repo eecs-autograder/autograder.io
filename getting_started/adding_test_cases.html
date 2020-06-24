@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="../_static/style-extra.css" type="text/css" />
 
   
@@ -31,6 +32,8 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
         <script src="../_static/js-extra.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -39,7 +42,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="How-tos and FAQ (WIP)" href="../how_tos.html" />
-    <link rel="prev" title="Creating Your First Project (WIP)" href="create_first_project.html" /> 
+    <link rel="prev" title="Creating Your First Project" href="create_first_project.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,18 +95,21 @@
 <li class="toctree-l2"><a class="reference internal" href="set_up_course.html#add-admin-staff-and-student-users">Add Admin, Staff, and Student Users</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="create_first_project.html">Creating Your First Project (WIP)</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="create_first_project.html">Creating Your First Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="create_first_project.html#set-the-hard-and-soft-deadlines">Set the Hard and Soft Deadlines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="create_first_project.html#optional-enable-group-work">(Optional) Enable Group Work</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#optional-limit-how-many-times-students-can-submit-per-day">(Optional) Limit How Many Times Students Can Submit Per Day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_first_project.html#optional-limit-how-many-times-students-can-submit-per-day">(Optional) Limit How Many Times Students Can Submit Per Day</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="create_first_project.html#set-the-timezone-for-reset-submissions-per-day-at-to-your-local-timezone">Set the timezone for “Reset submissions per day at” to your local timezone</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="create_first_project.html#choose-a-grading-policy-best-or-most-recent-submission">Choose a Grading Policy (Best or Most Recent Submission)</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Adding Test Cases to Your Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#upload-instructor-test-case-files">Upload Instructor Test Case Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configure-files-students-should-submit">Configure Files Students Should Submit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#make-a-submission-and-check-the-feedback">Make a Submission and Check the Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#publish-the-project">Publish the Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
@@ -194,7 +200,7 @@
         <a href="../how_tos.html" class="btn btn-neutral float-right" title="How-tos and FAQ (WIP)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="create_first_project.html" class="btn btn-neutral float-left" title="Creating Your First Project (WIP)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="create_first_project.html" class="btn btn-neutral float-left" title="Creating Your First Project" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -207,18 +213,106 @@
 <h1>Adding Test Cases to Your Project<a class="headerlink" href="#adding-test-cases-to-your-project" title="Permalink to this headline">¶</a></h1>
 <p>For example purposes, we’ll be using files with names and contents as
 listed below. Please create copies of these files on your local machine as
-you follow this guide.</p>
+you follow this guide. The files can also be found
+<a class="reference external" href="https://github.com/eecs-autograder/autograder.io/tree/master/docs/getting_started/code_files">on GitHub</a>.</p>
+<p><strong>IMPORTANT</strong>: The <code class="docutils literal notranslate"><span class="pre">.correct</span></code> files below should end with a blank line.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">test_math_funcs.py</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">import</span> <span class="nn">math_funcs</span>
+
+<span class="k">class</span> <span class="nc">MathFuncTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_add</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="n">math_funcs</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">test_subtract</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="n">math_funcs</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">test_multiply</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="n">math_funcs</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">math_funcs.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">first</span> <span class="o">+</span> <span class="n">second</span>
+
+<span class="k">def</span> <span class="nf">subtract</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+    <span class="c1"># Intentional bug</span>
+    <span class="k">return</span> <span class="n">second</span> <span class="o">-</span> <span class="n">first</span>
+
+<span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">first</span> <span class="o">*</span> <span class="n">second</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">print_words_test_1.in</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some</span> <span class="n">words</span> <span class="n">that</span> <span class="n">will</span> <span class="n">be</span> <span class="n">printed</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">print_words_test_1.correct</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some</span>
+<span class="n">words</span>
+<span class="n">that</span>
+<span class="n">will</span>
+<span class="n">be</span>
+<span class="n">printed</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">print_words_test_2.in</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">word</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">print_words_test_2.correct</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">word</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">student_solution.cpp</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;iostream&gt;</span>
+<span class="c1">#include &lt;string&gt;</span>
+<span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="nb">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="n">Intentional</span> <span class="n">bug</span> <span class="n">when</span> <span class="nb">input</span> <span class="n">only</span> <span class="n">has</span> <span class="n">one</span> <span class="n">word</span>
+    <span class="n">string</span> <span class="n">word</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">word</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">cin</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">word</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">word</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="upload-instructor-test-case-files">
 <h2>Upload Instructor Test Case Files<a class="headerlink" href="#upload-instructor-test-case-files" title="Permalink to this headline">¶</a></h2>
+<p>In the project admin page, click on the “Instructor Files Tab” and then upload
+the files <strong>test_math_funcs.py</strong>, <strong>print_words_test_1.in</strong>,
+<strong>print_words_test_1.correct</strong>, <strong>print_words_test_2.in</strong>,
+<strong>print_words_test_2.correct</strong> from the previous section.</p>
+<img alt="../_images/instructor_files.gif" src="../_images/instructor_files.gif" />
 </div>
 <div class="section" id="configure-files-students-should-submit">
 <h2>Configure Files Students Should Submit<a class="headerlink" href="#configure-files-students-should-submit" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="create-a-test-suite-with-c-output-tests">
-<h2>Create a Test Suite with C++ Output Tests<a class="headerlink" href="#create-a-test-suite-with-c-output-tests" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="create-a-test-suite-with-python-unit-tests">
 <h2>Create a Test Suite with Python Unit Tests<a class="headerlink" href="#create-a-test-suite-with-python-unit-tests" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="create-a-test-suite-with-c-output-tests">
+<h2>Create a Test Suite with C++ Output Tests<a class="headerlink" href="#create-a-test-suite-with-c-output-tests" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="make-a-submission-and-check-the-feedback">
 <h2>Make a Submission and Check the Feedback<a class="headerlink" href="#make-a-submission-and-check-the-feedback" title="Permalink to this headline">¶</a></h2>
@@ -242,7 +336,7 @@ you follow this guide.</p>
         <a href="../how_tos.html" class="btn btn-neutral float-right" title="How-tos and FAQ (WIP)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="create_first_project.html" class="btn btn-neutral float-left" title="Creating Your First Project (WIP)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="create_first_project.html" class="btn btn-neutral float-left" title="Creating Your First Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
