@@ -23,18 +23,18 @@ First, navigate to the admin page for your course.
 Then set the "Guest usernames must end with" field to your institution's email
 domain.
 
-.. image:: /pics/allowed_guest_domain.png
+.. image:: /pics/how_tos/allowed_guest_domain.png
 
 2. Enable the "Anyone with the link can submit" project option
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Navigate to the admin page for your project by clicking the gear icon next to
 the project name.
 
-.. image:: /pics/course_admin_projects_gear.png
+.. image:: /pics/how_tos/course_admin_projects_gear.png
 
 Then, select the "Anyone with the link can submit" option.
 
-.. image:: /pics/anyone_with_link_can_submit.png
+.. image:: /pics/how_tos/anyone_with_link_can_submit.png
 
 Grant an extension
 ------------------
