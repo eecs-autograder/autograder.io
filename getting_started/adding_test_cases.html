@@ -108,9 +108,16 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Adding Test Cases to Your Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#upload-instructor-test-case-files">Upload Instructor Test Case Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configure-files-students-should-submit">Configure Files Students Should Submit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#make-a-submission-and-check-the-feedback">Make a Submission and Check the Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-test-cases">Add Test Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-the-first-test">Create the First Test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-the-test-case-settings">“Test” the Test Case Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clone-the-test-case-to-complete-the-suite">Clone the Test Case to Complete the Suite</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#publish-the-project">Publish the Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
 </ul>
@@ -307,15 +314,72 @@ the files <strong>test_math_funcs.py</strong>, <strong>print_words_test_1.in</st
 </div>
 <div class="section" id="configure-files-students-should-submit">
 <h2>Configure Files Students Should Submit<a class="headerlink" href="#configure-files-students-should-submit" title="Permalink to this headline">¶</a></h2>
+<p>Click on the “Student Files” tab and add <strong>math_funcs.py</strong> and
+<strong>student_solution.cpp</strong> as expected student files.</p>
+<img alt="../_images/expected_student_files.gif" src="../_images/expected_student_files.gif" />
 </div>
+<div class="section" id="add-test-cases">
+<h2>Add Test Cases<a class="headerlink" href="#add-test-cases" title="Permalink to this headline">¶</a></h2>
+<p>Test cases on Autograder.io are organized into <em>suites</em>. When a student submits
+their code, each suite is run in an isolated environment. Suites also provide
+a <em>setup</em> step where work required by all the tests in a suite (e.g. compiling
+source code) can be done just once.</p>
 <div class="section" id="create-a-test-suite-with-python-unit-tests">
-<h2>Create a Test Suite with Python Unit Tests<a class="headerlink" href="#create-a-test-suite-with-python-unit-tests" title="Permalink to this headline">¶</a></h2>
+<h3>Create a Test Suite with Python Unit Tests<a class="headerlink" href="#create-a-test-suite-with-python-unit-tests" title="Permalink to this headline">¶</a></h3>
+<p>Click on the “Test Cases” tab and then click the “Add Suite” button. In the
+dialogue that appears, name the suite “Python Tests”.</p>
+<img alt="../_images/new_test_suite.png" src="../_images/new_test_suite.png" />
+<p>Scroll down to the section labelled “Instructor Files” and select
+<strong>test_math_funcs.py</strong> from the dropdown. Similarly, select <strong>math_funcs.py</strong>
+in the “Student Files” section.</p>
+<img alt="../_images/python_suite_instr_files.gif" src="../_images/python_suite_instr_files.gif" />
+<p>Scroll to the bottom of the page and click the “Save” button.
+Since we’re using Python, we don’t need to use the “setup” option.</p>
+<div class="section" id="create-the-first-test">
+<h4>Create the First Test<a class="headerlink" href="#create-the-first-test" title="Permalink to this headline">¶</a></h4>
+<p>Next, click the “plus” sign next to the suite name in the sidebar. In the
+dialogue that appears, name the test “Test Add” and set its command to
+<code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">test_math_funcs.py</span> <span class="pre">MathFuncTestCase.test_add</span></code>.</p>
+<img alt="../_images/python_first_test.gif" src="../_images/python_first_test.gif" />
+<p>Then, set the following options and click the “save” icon or the “Save” button
+at the bottom of the page.</p>
+<ul class="simple">
+<li><p><strong>Expected Return Code: Zero</strong>
+This tells us that the test is “correct” if the exit status of the program is
+zero.</p></li>
+<li><p><strong>Correct return code: 2 points</strong>
+This tells us that the student’s submission will be awarded 2 points for
+exiting with the correct status (zero in this case).</p></li>
+<li><p><strong>Feedback -&gt; Normal -&gt; Preset: Pass/Fail</strong>
+This specifies that students will only see whether their code passed this
+test. Output is hidden in order to prevent our test cases from being leaked.</p></li>
+</ul>
+<img alt="../_images/python_first_test_settings.gif" src="../_images/python_first_test_settings.gif" />
+</div>
+<div class="section" id="test-the-test-case-settings">
+<h4>“Test” the Test Case Settings<a class="headerlink" href="#test-the-test-case-settings" title="Permalink to this headline">¶</a></h4>
+<p>Before we make any more tests, we should make sure our first one is set up
+correctly. Click on the project name at the top of the page to navigate to the
+submission page. Drag <code class="docutils literal notranslate"><span class="pre">math_funcs.py</span></code> into the drop area and click the
+“Submit” button. You will see a warning that you didn’t submit all the
+expected files, but that’s ok. Click “Submit Anyway”.</p>
+<img alt="../_images/python_first_test_submission.gif" src="../_images/python_first_test_submission.gif" />
+<p>The submission results widget reloads periodically. Since we only have one
+test, we can use our browser’s refresh button to see the results sooner.</p>
+<p>Once the submission is finished grading, we’ll want to
+<strong>see the same feedback students will</strong>. Select <strong>“Normal”</strong> from the
+“Adjust Feedback” dropdown menu to do so.</p>
+<img alt="../_images/python_first_test_results.gif" src="../_images/python_first_test_results.gif" />
+<p>Click on the panel for “Test Add”, and you’ll see that under “Normal” feedback
+we don’t see any output from the test case. Our first test is good to go!</p>
+</div>
+<div class="section" id="clone-the-test-case-to-complete-the-suite">
+<h4>Clone the Test Case to Complete the Suite<a class="headerlink" href="#clone-the-test-case-to-complete-the-suite" title="Permalink to this headline">¶</a></h4>
+</div>
 </div>
 <div class="section" id="create-a-test-suite-with-c-output-tests">
-<h2>Create a Test Suite with C++ Output Tests<a class="headerlink" href="#create-a-test-suite-with-c-output-tests" title="Permalink to this headline">¶</a></h2>
+<h3>Create a Test Suite with C++ Output Tests<a class="headerlink" href="#create-a-test-suite-with-c-output-tests" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="make-a-submission-and-check-the-feedback">
-<h2>Make a Submission and Check the Feedback<a class="headerlink" href="#make-a-submission-and-check-the-feedback" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="publish-the-project">
 <h2>Publish the Project<a class="headerlink" href="#publish-the-project" title="Permalink to this headline">¶</a></h2>
