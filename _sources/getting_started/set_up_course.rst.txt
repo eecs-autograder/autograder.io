@@ -7,6 +7,8 @@ If you are creating a course for the first time, contact `help@autograder.io`
 (or your system administrator if running on your institution's servers)
 for assistance.
 
+.. _copy-course:
+
 Copying a Course from a Previous Term
 -------------------------------------
 To copy a course from a previous term, click the "copy" icon for the course you want to clone.

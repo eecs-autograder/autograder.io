@@ -1,8 +1,23 @@
 How-tos and FAQ (WIP)
 =====================
+This page is a work in progress. Contributions are welcome through
+pull requests to our
+`GitHub repository <https://github.com/eecs-autograder/autograder.io/tree/master/docs>`_.
 
 Clone a Course or Project for a New Term
 ------------------------------------------
+To clone a project, see :ref:`copy-course`.
+
+To clone a project, navigate to the course admin page and click on the
+"Projects" tab. Click the "copy" icon for the project you want to clone.
+
+.. image:: /pics/how_tos/copy_project.png
+
+Choose a new name for the project if you want the new project to be created
+in the current course. Alternatively, you can choose to have the new project
+be created under another course that you are an administrator for.
+
+.. image:: /pics/how_tos/copy_project_other_course.png
 
 Let students submit even if they're not in the roster
 -----------------------------------------------------
@@ -36,17 +51,17 @@ Then, select the "Anyone with the link can submit" option.
 
 .. image:: /pics/how_tos/anyone_with_link_can_submit.png
 
-Grant an extension
-------------------
+.. Grant an extension
+.. ------------------
 
-Edit group members or merge two groups
---------------------------------------
+.. Edit group members or merge two groups
+.. --------------------------------------
 
-Rerun a test case or submission
---------------------------------
+.. Rerun a test case or submission
+.. --------------------------------
 
-Why do I get "permission denied" when I run my script with ``./my_script.sh``?
-------------------------------------------------------------------------------
+.. Why do I get "permission denied" when I run my script with ``./my_script.sh``?
+.. ------------------------------------------------------------------------------
 
-Can I use MATLAB?
------------------
+.. Can I use MATLAB?
+.. -----------------
