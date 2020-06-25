@@ -1,5 +1,8 @@
 # UI Documentation Source
-This folder contains the source code for Autograder.io's UI documentation. It is written using [reStructuredText](https://docutils.sourceforge.io/docs/ref/rst/directives.html) and compiled using [Sphinx](http://www.sphinx-doc.org/).
+This folder contains the source code for Autograder.io's UI documentation.
+It is written using
+[reStructuredText](https://docutils.sourceforge.io/docs/ref/rst/directives.html)
+and compiled using [Sphinx](http://www.sphinx-doc.org/).
 
 ## Setup and Build
 First, install the required Python dependencies using

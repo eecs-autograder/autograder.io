@@ -3,11 +3,13 @@
 using namespace std;
 
 int main() {
-    // Intentional bug when input only has one word
+    // Intentional bug when input has more than one word
     string word;
     cin >> word;
+    cout << word << endl;
+    cin >> word;
     while (cin) {
-        cout << word << endl;
         cin >> word;
+        cout << word << endl;
     }
 }

@@ -52,6 +52,8 @@ their code, each suite is run in an isolated environment. Suites also provide
 a *setup* step where work required by all the tests in a suite (e.g. compiling
 source code) can be done just once.
 
+.. _create-python-suite:
+
 Create a Test Suite with Python Unit Tests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Click on the "Test Cases" tab and then click the "Add Suite" button. In the
@@ -79,13 +81,13 @@ dialogue that appears, name the test "Test Add" and set its command to
 Then, set the following options and click the "save" icon or the "Save" button
 at the bottom of the page.
 
-* **Expected Return Code: Zero**
+* **Expected Return Code:** Zero
   This tells us that the test is "correct" if the exit status of the program is
   zero.
-* **Correct return code: 2 points**
+* **Correct return code:** 2 points
   This tells us that the student's submission will be awarded 2 points for
   exiting with the correct status (zero in this case).
-* **Feedback -> Normal -> Preset: Pass/Fail**
+* **Feedback -> Normal -> Preset:** Pass/Fail
   This specifies that students will only see whether their code passed this
   test. Output is hidden in order to prevent our test cases from being leaked.
 
@@ -138,9 +140,71 @@ tests pass. We now have a fully-working suite of Python unit tests!
 
 Create a Test Suite with C++ Output Tests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In this section, we'll configure a suite of tests for a C++ program that reads
+from ``cin`` and prints words back to ``cout``. This section assumes you have
+read :ref:`create-python-suite`.
 
-Publish the Project
--------------------
+Create and Configure the Test Suite
+"""""""""""""""""""""""""""""""""""
+In the project admin page, create a new suite and call it "C++ Tests." Leave
+the list of necessary instructor files **blank**, and select
+``student_solution.cpp`` from the list of student files. Scroll down to the
+"Setup" section and set the "Setup command label" input to "Compile" and the
+"Setup command" input to ``g++ student_solution.cpp -o student_solution.exe``.
+Then scroll down and click the "Save" button at the bottom of the page.
 
-Downloading Grades and Submitted Files
---------------------------------------
+.. image:: /pics/adding_test_cases/cpp_suite_settings.png
+
+**Why don't we select the ``.in`` and ``.correct`` files in the "Instructor Files" list?**
+Autograder.io provides a mechanism for redirecting input from and
+*directly comparing* output to an instructor file *without ever putting those*
+*files in the same environment as the student code*. For the input files, this
+is mostly a convenience, but for the correct output files, this
+**greatly reduces the risk of student code gaming your test cases.** Since the
+student code never sees the correct output file, it can't try to read from the
+file, print its contents and vacuously pass the test case.
+
+Create the Test Cases
+"""""""""""""""""""""
+Create a new test case and call it "Print words test 1". Set the "Command"
+input text to ``./student_solution.exe``.
+
+.. image:: /pics/adding_test_cases/cpp_new_test.png
+
+Then edit the following settings and click the save button:
+
+* **Stdin source:** Instructor file content
+* **File:** print_words_test_1.in
+* **Stdout -> Check stdout against:** Instructor file content
+* **File:** print_words_test_1.correct
+* **Correct stdout:** 3 points
+* **Feedback -> Normal -> Preset:** Pass/Fail
+
+.. image:: /pics/adding_test_cases/cpp_output_test_settings.png
+
+Head over to the submission page once more, but this time submit
+``student_solution.cpp``. We should see our new test case pass and everything
+else fail.
+
+.. image:: /pics/adding_test_cases/cpp_first_test_results.png
+
+Make a clone of "Print words test 1" and call it "Print words test 2". Change
+the "Stdin" file to "print_words_test_2.in" and the "Stdout" file to
+"print_words_test_2.correct".
+
+.. image:: /pics/adding_test_cases/cpp_output_test2_settings.png
+
+Click the save button and make another
+submission. The new test should *fail* because of a bug in the code. Scroll
+down and expand the "Print words test 2" panel to see a diff of the expected
+and actual output.
+
+.. image:: /pics/adding_test_cases/cpp_test_diff.png
+
+Although we want to see these output diffs as instructors, we don't necessarily
+want to show that much information to students. Scroll up and change the
+"Adjust Feedback" dropdown to "Normal" to verify that the diff is hidden from
+students.
+
+Finally, fix the bug in student_solution.cpp, submit ``math_funcs.py`` and
+``student_solution.cpp``, and see all the tests pass!
