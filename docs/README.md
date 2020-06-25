@@ -7,6 +7,7 @@ First, install the required Python dependencies using
 ```
 $ cd docs
 $ pipenv install
+$ pipenv shell
 ```
 
 To build the HTML output (resulting files will be in the `html` directory):
