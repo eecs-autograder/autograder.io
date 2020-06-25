@@ -1,5 +1,8 @@
 How-tos and FAQ (WIP)
 =====================
+This page is a work in progress. Contributions are welcome through
+pull requests to our
+`GitHub repository <https://github.com/eecs-autograder/autograder.io/tree/master/docs>`_.
 
 Clone a Course or Project for a New Term
 ------------------------------------------
