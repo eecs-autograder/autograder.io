@@ -115,6 +115,26 @@ we don't see any output from the test case. Our first test is good to go!
 
 Clone the Test Case to Complete the Suite
 """""""""""""""""""""""""""""""""""""""""
+Rather than creating the rest of our tests from scratch, we'll clone the test
+we made in the previous section and make small changes to the clones. Hover
+over the **...** menu in the "Test Add" panel and click on "Clone test case".
+
+In the dialogue that appears, change the name to "Test Subtract" and then click
+the "Clone Test Case" button. Once the test has been cloned, change the last
+bit of text in the "Command" text input so that it reads
+``python3 test_math_funcs.py MathFuncTestCase.test_subtract``, then click the
+save button. Repeat this process one more time to create "Test Multiply".
+
+.. image:: /pics/adding_test_cases/python_clone_tests.gif
+
+Head back over to the submission page and submit ``math_funcs.py``. Since
+there's a bug in ``math_funcs.py``, we should see two tests passing and one
+test failing.
+
+.. image:: /pics/adding_test_cases/python_all_tests_one_failure.png
+
+Fix the bug in ``math_funcs.py``, submit again, and you should see all three
+tests pass. We now have a fully-working suite of Python unit tests!
 
 Create a Test Suite with C++ Output Tests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
