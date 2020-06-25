@@ -26,6 +26,7 @@ pull requests to our
     getting_started/set_up_course
     getting_started/create_first_project
     getting_started/adding_test_cases
+    getting_started/final_steps
 
 .. toctree::
     :caption: Topics

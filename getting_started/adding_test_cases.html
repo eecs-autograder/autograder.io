@@ -41,7 +41,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="How-tos and FAQ (WIP)" href="../how_tos.html" />
+    <link rel="next" title="Final Steps" href="final_steps.html" />
     <link rel="prev" title="Creating Your First Project" href="create_first_project.html" /> 
 </head>
 
@@ -115,11 +115,19 @@
 <li class="toctree-l4"><a class="reference internal" href="#clone-the-test-case-to-complete-the-suite">Clone the Test Case to Complete the Suite</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-and-configure-the-test-suite">Create and Configure the Test Suite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-the-test-cases">Create the Test Cases</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#publish-the-project">Publish the Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="final_steps.html">Final Steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="final_steps.html#publish-the-project">Publish the Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="final_steps.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="final_steps.html#showing-students-their-final-graded-submission">Showing Students their Final Graded Submission</a></li>
 </ul>
 </li>
 </ul>
@@ -204,7 +212,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="../how_tos.html" class="btn btn-neutral float-right" title="How-tos and FAQ (WIP)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="final_steps.html" class="btn btn-neutral float-right" title="Final Steps" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="create_first_project.html" class="btn btn-neutral float-left" title="Creating Your First Project" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -259,30 +267,30 @@ you follow this guide. The files can also be found
 </div>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">print_words_test_1.in</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some</span> <span class="n">words</span> <span class="n">that</span> <span class="n">will</span> <span class="n">be</span> <span class="n">printed</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">word</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">print_words_test_1.correct</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">word</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">print_words_test_2.in</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some</span> <span class="n">words</span> <span class="n">that</span> <span class="n">will</span> <span class="n">be</span> <span class="n">printed</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">print_words_test_2.correct</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some</span>
 <span class="n">words</span>
 <span class="n">that</span>
 <span class="n">will</span>
 <span class="n">be</span>
 <span class="n">printed</span>
-</pre></div>
-</div>
-</div>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">print_words_test_2.in</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">word</span>
-</pre></div>
-</div>
-</div>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">print_words_test_2.correct</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">word</span>
 </pre></div>
 </div>
 </div>
@@ -293,12 +301,14 @@ you follow this guide. The files can also be found
 <span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="nb">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="n">Intentional</span> <span class="n">bug</span> <span class="n">when</span> <span class="nb">input</span> <span class="n">only</span> <span class="n">has</span> <span class="n">one</span> <span class="n">word</span>
+    <span class="o">//</span> <span class="n">Intentional</span> <span class="n">bug</span> <span class="n">when</span> <span class="nb">input</span> <span class="n">has</span> <span class="n">more</span> <span class="n">than</span> <span class="n">one</span> <span class="n">word</span>
     <span class="n">string</span> <span class="n">word</span><span class="p">;</span>
     <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">word</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">word</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">word</span><span class="p">;</span>
     <span class="k">while</span> <span class="p">(</span><span class="n">cin</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">word</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
         <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">word</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">word</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -325,7 +335,7 @@ their code, each suite is run in an isolated environment. Suites also provide
 a <em>setup</em> step where work required by all the tests in a suite (e.g. compiling
 source code) can be done just once.</p>
 <div class="section" id="create-a-test-suite-with-python-unit-tests">
-<h3>Create a Test Suite with Python Unit Tests<a class="headerlink" href="#create-a-test-suite-with-python-unit-tests" title="Permalink to this headline">¶</a></h3>
+<span id="create-python-suite"></span><h3>Create a Test Suite with Python Unit Tests<a class="headerlink" href="#create-a-test-suite-with-python-unit-tests" title="Permalink to this headline">¶</a></h3>
 <p>Click on the “Test Cases” tab and then click the “Add Suite” button. In the
 dialogue that appears, name the suite “Python Tests”.</p>
 <img alt="../_images/new_test_suite.png" src="../_images/new_test_suite.png" />
@@ -344,13 +354,13 @@ dialogue that appears, name the test “Test Add” and set its command to
 <p>Then, set the following options and click the “save” icon or the “Save” button
 at the bottom of the page.</p>
 <ul class="simple">
-<li><p><strong>Expected Return Code: Zero</strong>
+<li><p><strong>Expected Return Code:</strong> Zero
 This tells us that the test is “correct” if the exit status of the program is
 zero.</p></li>
-<li><p><strong>Correct return code: 2 points</strong>
+<li><p><strong>Correct return code:</strong> 2 points
 This tells us that the student’s submission will be awarded 2 points for
 exiting with the correct status (zero in this case).</p></li>
-<li><p><strong>Feedback -&gt; Normal -&gt; Preset: Pass/Fail</strong>
+<li><p><strong>Feedback -&gt; Normal -&gt; Preset:</strong> Pass/Fail
 This specifies that students will only see whether their code passed this
 test. Output is hidden in order to prevent our test cases from being leaked.</p></li>
 </ul>
@@ -394,13 +404,63 @@ tests pass. We now have a fully-working suite of Python unit tests!</p>
 </div>
 <div class="section" id="create-a-test-suite-with-c-output-tests">
 <h3>Create a Test Suite with C++ Output Tests<a class="headerlink" href="#create-a-test-suite-with-c-output-tests" title="Permalink to this headline">¶</a></h3>
+<p>In this section, we’ll configure a suite of tests for a C++ program that reads
+from <code class="docutils literal notranslate"><span class="pre">cin</span></code> and prints words back to <code class="docutils literal notranslate"><span class="pre">cout</span></code>. This section assumes you have
+read <a class="reference internal" href="#create-python-suite"><span class="std std-ref">Create a Test Suite with Python Unit Tests</span></a>.</p>
+<div class="section" id="create-and-configure-the-test-suite">
+<h4>Create and Configure the Test Suite<a class="headerlink" href="#create-and-configure-the-test-suite" title="Permalink to this headline">¶</a></h4>
+<p>In the project admin page, create a new suite and call it “C++ Tests.” Leave
+the list of necessary instructor files <strong>blank</strong>, and select
+<code class="docutils literal notranslate"><span class="pre">student_solution.cpp</span></code> from the list of student files. Scroll down to the
+“Setup” section and set the “Setup command label” input to “Compile” and the
+“Setup command” input to <code class="docutils literal notranslate"><span class="pre">g++</span> <span class="pre">student_solution.cpp</span> <span class="pre">-o</span> <span class="pre">student_solution.exe</span></code>.
+Then scroll down and click the “Save” button at the bottom of the page.</p>
+<img alt="../_images/cpp_suite_settings.png" src="../_images/cpp_suite_settings.png" />
+<p><strong>Why don’t we select the ``.in`` and ``.correct`` files in the “Instructor Files” list?</strong>
+Autograder.io provides a mechanism for redirecting input from and
+<em>directly comparing</em> output to an instructor file <em>without ever putting those</em>
+<em>files in the same environment as the student code</em>. For the input files, this
+is mostly a convenience, but for the correct output files, this
+<strong>greatly reduces the risk of student code gaming your test cases.</strong> Since the
+student code never sees the correct output file, it can’t try to read from the
+file, print its contents and vacuously pass the test case.</p>
+</div>
+<div class="section" id="create-the-test-cases">
+<h4>Create the Test Cases<a class="headerlink" href="#create-the-test-cases" title="Permalink to this headline">¶</a></h4>
+<p>Create a new test case and call it “Print words test 1”. Set the “Command”
+input text to <code class="docutils literal notranslate"><span class="pre">./student_solution.exe</span></code>.</p>
+<img alt="../_images/cpp_new_test.png" src="../_images/cpp_new_test.png" />
+<p>Then edit the following settings and click the save button:</p>
+<ul class="simple">
+<li><p><strong>Stdin source:</strong> Instructor file content</p></li>
+<li><p><strong>File:</strong> print_words_test_1.in</p></li>
+<li><p><strong>Stdout -&gt; Check stdout against:</strong> Instructor file content</p></li>
+<li><p><strong>File:</strong> print_words_test_1.correct</p></li>
+<li><p><strong>Correct stdout:</strong> 3 points</p></li>
+<li><p><strong>Feedback -&gt; Normal -&gt; Preset:</strong> Pass/Fail</p></li>
+</ul>
+<img alt="../_images/cpp_output_test_settings.png" src="../_images/cpp_output_test_settings.png" />
+<p>Head over to the submission page once more, but this time submit
+<code class="docutils literal notranslate"><span class="pre">student_solution.cpp</span></code>. We should see our new test case pass and everything
+else fail.</p>
+<img alt="../_images/cpp_first_test_results.png" src="../_images/cpp_first_test_results.png" />
+<p>Make a clone of “Print words test 1” and call it “Print words test 2”. Change
+the “Stdin” file to “print_words_test_2.in” and the “Stdout” file to
+“print_words_test_2.correct”.</p>
+<img alt="../_images/cpp_output_test2_settings.png" src="../_images/cpp_output_test2_settings.png" />
+<p>Click the save button and make another
+submission. The new test should <em>fail</em> because of a bug in the code. Scroll
+down and expand the “Print words test 2” panel to see a diff of the expected
+and actual output.</p>
+<img alt="../_images/cpp_test_diff.png" src="../_images/cpp_test_diff.png" />
+<p>Although we want to see these output diffs as instructors, we don’t necessarily
+want to show that much information to students. Scroll up and change the
+“Adjust Feedback” dropdown to “Normal” to verify that the diff is hidden from
+students.</p>
+<p>Finally, fix the bug in student_solution.cpp, submit <code class="docutils literal notranslate"><span class="pre">math_funcs.py</span></code> and
+<code class="docutils literal notranslate"><span class="pre">student_solution.cpp</span></code>, and see all the tests pass!</p>
 </div>
 </div>
-<div class="section" id="publish-the-project">
-<h2>Publish the Project<a class="headerlink" href="#publish-the-project" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="downloading-grades-and-submitted-files">
-<h2>Downloading Grades and Submitted Files<a class="headerlink" href="#downloading-grades-and-submitted-files" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -412,7 +472,7 @@ tests pass. We now have a fully-working suite of Python unit tests!</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../how_tos.html" class="btn btn-neutral float-right" title="How-tos and FAQ (WIP)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="final_steps.html" class="btn btn-neutral float-right" title="Final Steps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="create_first_project.html" class="btn btn-neutral float-left" title="Creating Your First Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
