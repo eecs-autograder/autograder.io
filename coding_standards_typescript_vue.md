@@ -69,6 +69,14 @@ Lines of code should be no longer than 100 characters.
 
 ## Names
 - Use `PascalCase` for class, enum, and type names.
+    ```
+    class SpamEgg {}
+    type MyAlias = SpamEgg;
+    enum AnEnum {
+        val_one = 'val_one',
+        val_two = 'val_two
+    }
+    ```
 - Use `snake_case` for variable, function, method, and file names.
 - In HTML/CSS, use `skewer-case` for class and id names.
 - In Vue templates, use `snake_case` for `ref=xxx` and `data-testid=xxx` attributes.
@@ -102,14 +110,6 @@ Lines of code should be no longer than 100 characters.
         - Leading underscore: Vue reserves names starting with a leading "_" for its implementation.
         - $data.\<member_name\>: Accessing data members through $data loses type information.
         - Trailing underscore: A single trailing underscore is to easy to miss visually.
-```
-class SpamEgg {}
-type MyAlias = SpamEgg;
-enum AnEnum {
-    val_one = 'val_one',
-    val_two = 'val_two
-}
-```
 - Use UPPER_CASE for global constants or static readonly class variables.
 ```
 const MY_CONST = 42;

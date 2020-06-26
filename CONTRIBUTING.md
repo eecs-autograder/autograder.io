@@ -22,14 +22,14 @@ In your issue description, please include:
 - A screenshot and brief description showing what actually happened.
 
 ### API Backend
-If you are writing an external tool that uses the Autograder.io API and encounter a bug, please search our [central issue tracker](https://github.com/eecs-autograder/autograder.io/issues) to see if a matching issue already exists. 
+If you are writing an external tool that uses the Autograder.io API and encounter a bug, please search our [central issue tracker](https://github.com/eecs-autograder/autograder.io/issues) to see if a matching issue already exists.
 
 In your issue description, please include:
 - A minimal source code snippet that can be used to reproduce the issue.
 - The stack trace and HTTP response body that your program produces.
 
 ## What issues can I help with?
-In general, any open issue is fair game. Issues labelled "size-small" or "good first issue" are likely a good starting point for new developers. Once you've found an issue you'd like to work on, please comment on the issue stating your desire to do so. 
+In general, any open issue is fair game. Issues labelled "size-small" or "good first issue" are likely a good starting point for new developers. Once you've found an issue you'd like to work on, please comment on the issue stating your desire to do so.
 
 ### I'm looking for something more challenging. Any suggestions?
 Yes! Here are a few more involved issues that we'd graciously accept help with:
@@ -46,7 +46,7 @@ For frontend development, see the [README](https://github.com/eecs-autograder/ag
 ## Coding Standards
 When contributing to the `autograder-server` or `autograder-sandbox` repositories, please read our [Python coding standards](./coding_standards_python.md).
 
-When contributing to the `ag-website-vue` or `ag-client-typescript` repositories, please read our [Typescript coding standards](./coding_standards_typescript_vue.md).
+When contributing to the `ag-website-vue` or `ag-client-typescript` repositories, please read our [Typescript/Vue coding standards](./coding_standards_typescript_vue.md).
 
 Some repositories have additional coding standards documents beyond the language standards mentioned above:
 - [autograder-server](https://github.com/eecs-autograder/autograder-server#coding-standards)
