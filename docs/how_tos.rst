@@ -29,7 +29,8 @@ to submit and form groups. There are two quick steps to changing this behavior:
 Guests are users who are allowed to submit an assignment but are not in the
 roster for the course. If your institution has a specific email domain
 (e.g. `@umich.edu`) we recommend setting the "Guest usernames must end with"
-field to that email domain.
+field to that email domain. Doing so will make it so that only guests with an
+`@umich.edu` (in this example) username can submit.
 
 First, navigate to the admin page for your course.
 
