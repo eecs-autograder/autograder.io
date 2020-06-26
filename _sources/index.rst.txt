@@ -33,7 +33,7 @@ pull requests to our
 
     how_tos
     topics/hard_and_soft_deadlines
-    topics/bonus_submissions_and_late_days
     topics/custom_sandbox_images
-    topics/handgrading
-    topics/mutation_testing
+..    topics/bonus_submissions_and_late_days
+..    topics/handgrading
+..    topics/mutation_testing

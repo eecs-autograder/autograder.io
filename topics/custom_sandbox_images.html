@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Building Custom Sandbox Images with Docker (WIP) &mdash; Autograder.io - UI Docs  documentation</title>
+  <title>Building Custom Sandbox Images with Docker &mdash; Autograder.io - UI Docs  documentation</title>
   
 
   
@@ -41,8 +41,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Style Grading by Hand (WIP)" href="handgrading.html" />
-    <link rel="prev" title="“Bonus Submission” and “Late Day” Tokens (WIP)" href="bonus_submissions_and_late_days.html" /> 
+    <link rel="prev" title="Hard &amp; Soft Deadlines: Recommendations and Implications" href="hard_and_soft_deadlines.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -108,11 +107,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/adding_test_cases.html">Adding Test Cases to Your Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#upload-instructor-test-case-files">Upload Instructor Test Case Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#configure-files-students-should-submit">Configure Files Students Should Submit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#make-a-submission-and-check-the-feedback">Make a Submission and Check the Feedback</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#publish-the-project">Publish the Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#add-test-cases">Add Test Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-the-first-test">Create the First Test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#test-the-test-case-settings">“Test” the Test Case Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#clone-the-test-case-to-complete-the-suite">Clone the Test Case to Complete the Suite</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-and-configure-the-test-suite">Create and Configure the Test Suite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-the-test-cases">Create the Test Cases</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/final_steps.html">Final Steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/final_steps.html#publish-the-project">Publish the Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/final_steps.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/final_steps.html#showing-students-their-final-graded-submission">Showing Students their Final Graded Submission</a></li>
 </ul>
 </li>
 </ul>
@@ -125,18 +139,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../how_tos.html#enable-the-anyone-with-the-link-can-submit-project-option">2. Enable the “Anyone with the link can submit” project option</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#grant-an-extension">Grant an extension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#edit-group-members-or-merge-two-groups">Edit group members or merge two groups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#rerun-a-test-case-or-submission">Rerun a test case or submission</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#why-do-i-get-permission-denied-when-i-run-my-script-with-my-script-sh">Why do I get “permission denied” when I run my script with <code class="docutils literal notranslate"><span class="pre">./my_script.sh</span></code>?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#can-i-use-matlab">Can I use MATLAB?</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hard_and_soft_deadlines.html">Hard &amp; Soft Deadlines: Recommendations and Implications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bonus_submissions_and_late_days.html">“Bonus Submission” and “Late Day” Tokens (WIP)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Building Custom Sandbox Images with Docker (WIP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="handgrading.html">Style Grading by Hand (WIP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mutation_testing.html">Evaluating Student Test Cases with Mutation Testing (WIP)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building Custom Sandbox Images with Docker</a></li>
 </ul>
 
             
@@ -183,7 +189,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Building Custom Sandbox Images with Docker (WIP)</li>
+      <li>Building Custom Sandbox Images with Docker</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -197,10 +203,8 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="handgrading.html" class="btn btn-neutral float-right" title="Style Grading by Hand (WIP)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="bonus_submissions_and_late_days.html" class="btn btn-neutral float-left" title="“Bonus Submission” and “Late Day” Tokens (WIP)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="hard_and_soft_deadlines.html" class="btn btn-neutral float-left" title="Hard &amp; Soft Deadlines: Recommendations and Implications" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -209,8 +213,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="building-custom-sandbox-images-with-docker-wip">
-<h1>Building Custom Sandbox Images with Docker (WIP)<a class="headerlink" href="#building-custom-sandbox-images-with-docker-wip" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="building-custom-sandbox-images-with-docker">
+<h1>Building Custom Sandbox Images with Docker<a class="headerlink" href="#building-custom-sandbox-images-with-docker" title="Permalink to this headline">¶</a></h1>
+<p>Autograder.io uses Docker images as its foundation for sandbox environments
+used to run test cases. For information on building Docker images,
+see the <a class="reference external" href="https://docs.docker.com/get-started/">Docker documentation</a> and
+<a class="reference external" href="https://docs.docker.com/engine/reference/builder/">Dockerfile reference</a>.</p>
+<p>Custom Docker images must meet the following requirements to work properly
+on Autograder.io:</p>
+<ul class="simple">
+<li><p>The image must extend one of the base images defined in the
+<a class="reference external" href="https://github.com/eecs-autograder/base-docker-images">base-docker-images repo</a>
+or otherwise meet the requirements listed in that repo’s README.</p></li>
+<li><p>The image must NOT use the <cite>CMD</cite> or <cite>ENTRYPOINT</cite> directives. Allowing these
+directives makes it harder for us to guarantee that containers created from
+the image won’t exit prematurely.</p></li>
+</ul>
+<p>For the purpose of this guide, we will use the following minimal Dockerfile:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Dockerfile</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>FROM eecsautograder/ubuntu18:latest
+</pre></div>
+</div>
+</div>
+<p>Once you’ve successfully built your image on your local computer, go to the
+admin page for your course and click on the “Sandbox Images” tab.</p>
+<img alt="../_images/sandbox_images_tab.png" src="../_images/sandbox_images_tab.png" />
+<p>Add your Dockerfile and any other necessary files to the drop area and click
+the “Build” button. When your image finishes building, it will have a generic
+name of the form “New Image …” Click on the image in the sidebar and give it
+a new name.</p>
+<img alt="../_images/rename_image.gif" src="../_images/rename_image.gif" />
+<p>To rebuild an image, click on the image name in the sidebar and scroll down to
+the “Rebuild …” section. Upload your files and click “Rebuild.”</p>
 </div>
 
 
@@ -221,10 +256,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="handgrading.html" class="btn btn-neutral float-right" title="Style Grading by Hand (WIP)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="bonus_submissions_and_late_days.html" class="btn btn-neutral float-left" title="“Bonus Submission” and “Late Day” Tokens (WIP)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="hard_and_soft_deadlines.html" class="btn btn-neutral float-left" title="Hard &amp; Soft Deadlines: Recommendations and Implications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

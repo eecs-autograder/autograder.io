@@ -41,7 +41,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="“Bonus Submission” and “Late Day” Tokens (WIP)" href="bonus_submissions_and_late_days.html" />
+    <link rel="next" title="Building Custom Sandbox Images with Docker" href="custom_sandbox_images.html" />
     <link rel="prev" title="How-tos and FAQ (WIP)" href="../how_tos.html" /> 
 </head>
 
@@ -108,11 +108,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/adding_test_cases.html">Adding Test Cases to Your Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#upload-instructor-test-case-files">Upload Instructor Test Case Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#configure-files-students-should-submit">Configure Files Students Should Submit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#make-a-submission-and-check-the-feedback">Make a Submission and Check the Feedback</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#publish-the-project">Publish the Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#add-test-cases">Add Test Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-the-first-test">Create the First Test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#test-the-test-case-settings">“Test” the Test Case Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#clone-the-test-case-to-complete-the-suite">Clone the Test Case to Complete the Suite</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-and-configure-the-test-suite">Create and Configure the Test Suite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-the-test-cases">Create the Test Cases</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/final_steps.html">Final Steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/final_steps.html#publish-the-project">Publish the Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/final_steps.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/final_steps.html#showing-students-their-final-graded-submission">Showing Students their Final Graded Submission</a></li>
 </ul>
 </li>
 </ul>
@@ -125,18 +140,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../how_tos.html#enable-the-anyone-with-the-link-can-submit-project-option">2. Enable the “Anyone with the link can submit” project option</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#grant-an-extension">Grant an extension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#edit-group-members-or-merge-two-groups">Edit group members or merge two groups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#rerun-a-test-case-or-submission">Rerun a test case or submission</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#why-do-i-get-permission-denied-when-i-run-my-script-with-my-script-sh">Why do I get “permission denied” when I run my script with <code class="docutils literal notranslate"><span class="pre">./my_script.sh</span></code>?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#can-i-use-matlab">Can I use MATLAB?</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Hard &amp; Soft Deadlines: Recommendations and Implications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bonus_submissions_and_late_days.html">“Bonus Submission” and “Late Day” Tokens (WIP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="custom_sandbox_images.html">Building Custom Sandbox Images with Docker (WIP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="handgrading.html">Style Grading by Hand (WIP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mutation_testing.html">Evaluating Student Test Cases with Mutation Testing (WIP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_sandbox_images.html">Building Custom Sandbox Images with Docker</a></li>
 </ul>
 
             
@@ -197,7 +204,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="bonus_submissions_and_late_days.html" class="btn btn-neutral float-right" title="“Bonus Submission” and “Late Day” Tokens (WIP)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="custom_sandbox_images.html" class="btn btn-neutral float-right" title="Building Custom Sandbox Images with Docker" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../how_tos.html" class="btn btn-neutral float-left" title="How-tos and FAQ (WIP)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -231,7 +238,7 @@ students.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="bonus_submissions_and_late_days.html" class="btn btn-neutral float-right" title="“Bonus Submission” and “Late Day” Tokens (WIP)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="custom_sandbox_images.html" class="btn btn-neutral float-right" title="Building Custom Sandbox Images with Docker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../how_tos.html" class="btn btn-neutral float-left" title="How-tos and FAQ (WIP)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
