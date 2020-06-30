@@ -12,6 +12,8 @@ Autograder.io offers:
 This repository contains the central [UI documentation](https://eecs-autograder.github.io/autograder.io/) and [issue tracker](https://github.com/eecs-autograder/autograder.io/issues) for Autograder.io.
 
 ## For Users
+**Note to students**: If you have a question about your project code or why you see different results on your local machine vs. the autograder, please contact your course staff. Please do not email the Autograder.io team, as the Honor Code prohibits us from offering such assistance.
+
 If you are a new user, please read our [getting started guide]() for basic information on setting up your course and first project.
 
 If you have a question about an existing feature, please see our list of [common topics]() and our [UI documentation](https://eecs-autograder.github.io/autograder.io/). If you can't find your answer there, please contact us at help@autograder.io.
@@ -32,7 +34,7 @@ When requesting a feature, please include:
 After being discussed, issues will be moved or linked to parallel issues in the repositories where the bug fix or feature request will be implemented.
 
 ## Contributing
-Contributions to Autograder.io are always welcome! Autograder.io's source code is divided across a handful of repositories, including the database and API backend, the website frontend, and several supporting libraries. 
+Contributions to Autograder.io are always welcome! Autograder.io's source code is divided across a handful of repositories, including the database and API backend, the website frontend, and several supporting libraries.
 
 Contributions to the UI documentation can be made through pull requests to this repository. The source code for the UI documentation can be found in the [docs folder](./docs) of this repository.
 
