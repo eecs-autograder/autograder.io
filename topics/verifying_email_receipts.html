@@ -218,7 +218,7 @@
 <h1>Verifying Submission Email Receipts Manually<a class="headerlink" href="#verifying-submission-email-receipts-manually" title="Permalink to this headline">¶</a></h1>
 <p>Submission email receipts can be verified by visiting the verification link
 in the email or manually using GPG.</p>
-<p>First, save the content of the email to a file, say <cite>message.txt.asc</cite>. The
+<p>First, save the content of the email to a file, say <code class="code docutils literal notranslate"><span class="pre">message.txt.asc</span></code>. The
 message will look similar to this:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat message.txt.asc
 -----BEGIN PGP SIGNED MESSAGE-----
@@ -264,7 +264,7 @@ ds94vNbd5UGypFCpoiKcQRCSgRu0NYQh8skVSYygabKoCAnNb4VQLXEyjEw1FP5C
 </pre></div>
 </div>
 <p>Next, download and import Autograder.io’s public key. If you’re using
-a custom deployment of Autograder.io, replace <cite>autograder.io</cite> with your domain
+a custom deployment of Autograder.io, replace <code class="code docutils literal notranslate"><span class="pre">autograder.io</span></code> with your domain
 in the url below:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ curl -sSL https://autograder.io/api/gpg_public_key/ | gpg --import -
 </pre></div>

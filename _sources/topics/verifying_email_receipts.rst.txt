@@ -3,7 +3,7 @@ Verifying Submission Email Receipts Manually
 Submission email receipts can be verified by visiting the verification link
 in the email or manually using GPG.
 
-First, save the content of the email to a file, say `message.txt.asc`. The
+First, save the content of the email to a file, say :code:`message.txt.asc`. The
 message will look similar to this:
 
 .. code-block:: none
@@ -51,7 +51,7 @@ message will look similar to this:
     -----END PGP SIGNATURE-----
 
 Next, download and import Autograder.io's public key. If you're using
-a custom deployment of Autograder.io, replace `autograder.io` with your domain
+a custom deployment of Autograder.io, replace :code:`autograder.io` with your domain
 in the url below:
 
 .. code-block:: none
