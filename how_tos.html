@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>How-tos and FAQ (WIP) &mdash; Autograder.io - UI Docs  documentation</title>
+  <title>How-tos and FAQ &mdash; Autograder.io - UI Docs  documentation</title>
   
 
   
@@ -133,17 +133,26 @@
 </ul>
 <p class="caption"><span class="caption-text">Topics</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">How-tos and FAQ (WIP)</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How-tos and FAQ</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#clone-a-course-or-project-for-a-new-term">Clone a Course or Project for a New Term</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#let-students-submit-even-if-they-re-not-in-the-roster">Let students submit even if they’re not in the roster</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#restrict-guests-to-your-email-domain-optional-once-per-course">1. Restrict guests to your email domain (Optional, once per course)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#enable-the-anyone-with-the-link-can-submit-project-option">2. Enable the “Anyone with the link can submit” project option</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#grant-an-extension">Grant an extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-group-members">Edit group members</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rerun-a-test-case-or-submission">Rerun a test case or submission</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rerunning-a-stuck-or-errored-submission">Rerunning a “stuck” or “errored” submission</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#why-do-i-get-permission-denied-when-i-run-my-script-with-my-script-sh">Why do I get “permission denied” when I run my script with <code class="docutils literal notranslate"><span class="pre">./my_script.sh</span></code>?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#can-i-use-matlab">Can I use MATLAB?</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="topics/hard_and_soft_deadlines.html">Hard &amp; Soft Deadlines: Recommendations and Implications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="topics/custom_sandbox_images.html">Building Custom Sandbox Images with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/verifying_email_receipts.html">Verifying Submission Email Receipts Manually</a></li>
 </ul>
 
             
@@ -190,7 +199,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>How-tos and FAQ (WIP)</li>
+      <li>How-tos and FAQ</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -216,14 +225,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="how-tos-and-faq-wip">
-<h1>How-tos and FAQ (WIP)<a class="headerlink" href="#how-tos-and-faq-wip" title="Permalink to this headline">¶</a></h1>
-<p>This page is a work in progress. Contributions are welcome through
+  <div class="section" id="how-tos-and-faq">
+<h1>How-tos and FAQ<a class="headerlink" href="#how-tos-and-faq" title="Permalink to this headline">¶</a></h1>
+<p>This page will be updated as needed. Contributions are welcome through
 pull requests to our
 <a class="reference external" href="https://github.com/eecs-autograder/autograder.io/tree/master/docs">GitHub repository</a>.</p>
 <div class="section" id="clone-a-course-or-project-for-a-new-term">
 <h2>Clone a Course or Project for a New Term<a class="headerlink" href="#clone-a-course-or-project-for-a-new-term" title="Permalink to this headline">¶</a></h2>
-<p>To clone a project, see <a class="reference internal" href="getting_started/set_up_course.html#copy-course"><span class="std std-ref">Copying a Course from a Previous Term</span></a>.</p>
+<p>To clone a course, see <a class="reference internal" href="getting_started/set_up_course.html#copy-course"><span class="std std-ref">Copying a Course from a Previous Term</span></a>.</p>
 <p>To clone a project, navigate to the course admin page and click on the
 “Projects” tab. Click the “copy” icon for the project you want to clone.</p>
 <img alt="_images/copy_project.png" src="_images/copy_project.png" />
@@ -256,7 +265,71 @@ the project name.</p>
 <img alt="_images/course_admin_projects_gear.png" src="_images/course_admin_projects_gear.png" />
 <p>Then, select the “Anyone with the link can submit” option.</p>
 <img alt="_images/anyone_with_link_can_submit.png" src="_images/anyone_with_link_can_submit.png" />
+<p>Then, share the project URL with your students. The link will be of the form
+<code class="code docutils literal notranslate"><span class="pre">autograder.io/web/project/&lt;id&gt;</span></code>.</p>
 </div>
+</div>
+<div class="section" id="grant-an-extension">
+<h2>Grant an extension<a class="headerlink" href="#grant-an-extension" title="Permalink to this headline">¶</a></h2>
+<p>To grant an extension, navigate to the project admin page, and select the
+“Groups &amp; Extensions” tab. Select a group from the “Edit Group” dropdown,
+set their extension as desired, and click the “Update Group” button.</p>
+<img alt="_images/grant_extension.png" src="_images/grant_extension.png" />
+</div>
+<div class="section" id="edit-group-members">
+<h2>Edit group members<a class="headerlink" href="#edit-group-members" title="Permalink to this headline">¶</a></h2>
+<p>Navigate to the project admin page, and select the
+“Groups &amp; Extensions” tab.</p>
+<p>To edit the members of an existing group, select a group from the
+“Edit Group” dropdown, add, remove, or change members as needed,
+and click the “Update Group” button.</p>
+<img alt="_images/edit_group_members.png" src="_images/edit_group_members.png" />
+<p>To create a new group, click the “Create New Group” button in the bottom-right
+corner of the page and complete the dialogue that appears.</p>
+<p>To merge two existing groups, click the “Merge Groups” button in the bottom-right
+cornen and complete the dialogue that appears.</p>
+</div>
+<div class="section" id="rerun-a-test-case-or-submission">
+<h2>Rerun a test case or submission<a class="headerlink" href="#rerun-a-test-case-or-submission" title="Permalink to this headline">¶</a></h2>
+<p>IMPORTANT: Rerunning submissions and test cases can cause students scores to
+change. Before rerunning anything, please download a spreadsheet of grades for
+all submissions. See <a class="reference internal" href="getting_started/final_steps.html#download-grades"><span class="std std-ref">Downloading Grades and Submitted Files</span></a> for instructions on how to do that.</p>
+<p>To rerun any number of submissions and test cases, click on the “Rerun” tab
+of the project admin page. If you want to rerun specific submissions, select
+the student/group from the “Choose a student” menu, then select the submission(s)
+you want to rerun. You may select submissions from as many additional
+students/groups as you wish.</p>
+<p>Next, select which test cases you want to rerun for those submissions you selected.
+If you only want to rerun a few test cases, then uncheck the “Rerun All Tests”
+checkbox and select the test cases you want to rerun.</p>
+<img alt="_images/rerun.png" src="_images/rerun.png" />
+<p>Once you’ve selected the submissions and tests you want to rerun, click the “Rerun”
+button. The progress of the rerun task will appear below and update automatically.</p>
+<div class="section" id="rerunning-a-stuck-or-errored-submission">
+<h3>Rerunning a “stuck” or “errored” submission<a class="headerlink" href="#rerunning-a-stuck-or-errored-submission" title="Permalink to this headline">¶</a></h3>
+<p>In some rare cases, a submission may not properly finish being grading. In the
+case of a service outage, this can result in the submission being marked with
+“error” status. In even rarer circumstances, a submission may get stuck in the
+“queued” or “grading” phase and stop making progress.</p>
+<p>In either of these circumstances, you can do a full rerun of the submission
+by selecting the appropriate submission and checking the “Rerun All Tests”
+and “Rerun All Suites” checkboxes as shown below. When the rerun finishes,
+the submission’s status will be set to “finished.”</p>
+<img alt="_images/full_submission_rerun.png" src="_images/full_submission_rerun.png" />
+</div>
+</div>
+<div class="section" id="why-do-i-get-permission-denied-when-i-run-my-script-with-my-script-sh">
+<h2>Why do I get “permission denied” when I run my script with <code class="docutils literal notranslate"><span class="pre">./my_script.sh</span></code>?<a class="headerlink" href="#why-do-i-get-permission-denied-when-i-run-my-script-with-my-script-sh" title="Permalink to this headline">¶</a></h2>
+<p>File permissions aren’t preserved when files are uploaded. You can run your
+script by invoking the appropriate interpreter, e.g. <code class="code docutils literal notranslate"><span class="pre">sh</span> <span class="pre">my_script.sh</span></code> or
+<code class="code docutils literal notranslate"><span class="pre">python3</span> <span class="pre">my_code.py</span></code>.</p>
+</div>
+<div class="section" id="can-i-use-matlab">
+<h2>Can I use MATLAB?<a class="headerlink" href="#can-i-use-matlab" title="Permalink to this headline">¶</a></h2>
+<p>Sort of. Courses using Autograder.io that teach MATLAB typically use the
+<cite>Octave &lt;https://www.gnu.org/software/octave/&gt;</cite> interpreter in their autograder
+sandbox images. MATLAB’s proprietary nature makes it difficult to install under
+the constraints that Autograder.io puts on sandbox images.</p>
 </div>
 </div>
 
