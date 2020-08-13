@@ -1,12 +1,12 @@
-How-tos and FAQ (WIP)
-=====================
-This page is a work in progress. Contributions are welcome through
+How-tos and FAQ
+===============
+This page will be updated as needed. Contributions are welcome through
 pull requests to our
 `GitHub repository <https://github.com/eecs-autograder/autograder.io/tree/master/docs>`_.
 
 Clone a Course or Project for a New Term
 ------------------------------------------
-To clone a project, see :ref:`copy-course`.
+To clone a course, see :ref:`copy-course`.
 
 To clone a project, navigate to the course admin page and click on the
 "Projects" tab. Click the "copy" icon for the project you want to clone.
@@ -52,17 +52,79 @@ Then, select the "Anyone with the link can submit" option.
 
 .. image:: /pics/how_tos/anyone_with_link_can_submit.png
 
-.. Grant an extension
-.. ------------------
+Then, share the project URL with your students. The link will be of the form
+:code:`autograder.io/web/project/<id>`.
 
-.. Edit group members or merge two groups
-.. --------------------------------------
+Grant an extension
+------------------
+To grant an extension, navigate to the project admin page, and select the
+"Groups & Extensions" tab. Select a group from the "Edit Group" dropdown,
+set their extension as desired, and click the "Update Group" button.
 
-.. Rerun a test case or submission
-.. --------------------------------
+.. image:: /pics/how_tos/grant_extension.png
 
-.. Why do I get "permission denied" when I run my script with ``./my_script.sh``?
-.. ------------------------------------------------------------------------------
+Edit group members
+------------------
+Navigate to the project admin page, and select the
+"Groups & Extensions" tab.
 
-.. Can I use MATLAB?
-.. -----------------
+To edit the members of an existing group, select a group from the
+"Edit Group" dropdown, add, remove, or change members as needed,
+and click the "Update Group" button.
+
+.. image:: /pics/how_tos/edit_group_members.png
+
+To create a new group, click the "Create New Group" button in the bottom-right
+corner of the page and complete the dialogue that appears.
+
+To merge two existing groups, click the "Merge Groups" button in the bottom-right
+cornen and complete the dialogue that appears.
+
+Rerun a test case or submission
+--------------------------------
+IMPORTANT: Rerunning submissions and test cases can cause students scores to
+change. Before rerunning anything, please download a spreadsheet of grades for
+all submissions. See :ref:`download-grades` for instructions on how to do that.
+
+To rerun any number of submissions and test cases, click on the "Rerun" tab
+of the project admin page. If you want to rerun specific submissions, select
+the student/group from the "Choose a student" menu, then select the submission(s)
+you want to rerun. You may select submissions from as many additional
+students/groups as you wish.
+
+Next, select which test cases you want to rerun for those submissions you selected.
+If you only want to rerun a few test cases, then uncheck the "Rerun All Tests"
+checkbox and select the test cases you want to rerun.
+
+.. image:: /pics/how_tos/rerun.png
+
+Once you've selected the submissions and tests you want to rerun, click the "Rerun"
+button. The progress of the rerun task will appear below and update automatically.
+
+Rerunning a "stuck" or "errored" submission
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In some rare cases, a submission may not properly finish being grading. In the
+case of a service outage, this can result in the submission being marked with
+"error" status. In even rarer circumstances, a submission may get stuck in the
+"queued" or "grading" phase and stop making progress.
+
+In either of these circumstances, you can do a full rerun of the submission
+by selecting the appropriate submission and checking the "Rerun All Tests"
+and "Rerun All Suites" checkboxes as shown below. When the rerun finishes,
+the submission's status will be set to "finished."
+
+.. image:: /pics/how_tos/full_submission_rerun.png
+
+
+Why do I get "permission denied" when I run my script with ``./my_script.sh``?
+------------------------------------------------------------------------------
+File permissions aren't preserved when files are uploaded. You can run your
+script by invoking the appropriate interpreter, e.g. :code:`sh my_script.sh` or
+:code:`python3 my_code.py`.
+
+Can I use MATLAB?
+-----------------
+Sort of. Courses using Autograder.io that teach MATLAB typically use the
+`Octave <https://www.gnu.org/software/octave/>` interpreter in their autograder
+sandbox images. MATLAB's proprietary nature makes it difficult to install under
+the constraints that Autograder.io puts on sandbox images.

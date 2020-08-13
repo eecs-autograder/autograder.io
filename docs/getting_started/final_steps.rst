@@ -9,6 +9,8 @@ the "Save" button at the bottom of the page.
 
 .. image:: /pics/final_steps/publish_project.png
 
+.. _download-grades:
+
 Downloading Grades and Submitted Files
 --------------------------------------
 On the project admin page, click on the "Grades & Files" tab. Select your
