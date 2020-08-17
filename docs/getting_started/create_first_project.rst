@@ -40,6 +40,8 @@ the first time, they will be prompted to send an invitation to the student(s)
 they wish to be in a group with. Those students must then visit the project
 submission page and accept the invitation.
 
+.. _submission-limit:
+
 (Optional) Limit How Many Times Students Can Submit Per Day
 -----------------------------------------------------------
 You can choose to limit the number of times an individual student or group can
