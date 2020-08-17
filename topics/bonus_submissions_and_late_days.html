@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>“Bonus Submission” and “Late Day” Tokens &mdash; Autograder.io - UI Docs  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style-extra.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js-extra.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Verifying Submission Email Receipts Manually" href="verifying_email_receipts.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #A280AA" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Autograder.io - UI Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/set_up_course.html">Setting Up Your Course</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/set_up_course.html#first-time-course-creation">First-time course creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/set_up_course.html#copying-a-course-from-a-previous-term">Copying a Course from a Previous Term</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/set_up_course.html#add-admin-staff-and-student-users">Add Admin, Staff, and Student Users</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/create_first_project.html">Creating Your First Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/create_first_project.html#set-the-hard-and-soft-deadlines">Set the Hard and Soft Deadlines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/create_first_project.html#optional-enable-group-work">(Optional) Enable Group Work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/create_first_project.html#optional-limit-how-many-times-students-can-submit-per-day">(Optional) Limit How Many Times Students Can Submit Per Day</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/create_first_project.html#set-the-timezone-for-reset-submissions-per-day-at-to-your-local-timezone">Set the timezone for “Reset submissions per day at” to your local timezone</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/create_first_project.html#choose-a-grading-policy-best-or-most-recent-submission">Choose a Grading Policy (Best or Most Recent Submission)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/adding_test_cases.html">Adding Test Cases to Your Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#upload-instructor-test-case-files">Upload Instructor Test Case Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#configure-files-students-should-submit">Configure Files Students Should Submit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/adding_test_cases.html#add-test-cases">Add Test Cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-a-test-suite-with-python-unit-tests">Create a Test Suite with Python Unit Tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-the-first-test">Create the First Test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#test-the-test-case-settings">“Test” the Test Case Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#clone-the-test-case-to-complete-the-suite">Clone the Test Case to Complete the Suite</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-a-test-suite-with-c-output-tests">Create a Test Suite with C++ Output Tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-and-configure-the-test-suite">Create and Configure the Test Suite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting_started/adding_test_cases.html#create-the-test-cases">Create the Test Cases</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/final_steps.html">Final Steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/final_steps.html#publish-the-project">Publish the Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/final_steps.html#downloading-grades-and-submitted-files">Downloading Grades and Submitted Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/final_steps.html#showing-students-their-final-graded-submission">Showing Students their Final Graded Submission</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Topics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../how_tos.html">How-tos and FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#clone-a-course-or-project-for-a-new-term">Clone a Course or Project for a New Term</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#let-students-submit-even-if-they-re-not-in-the-roster">Let students submit even if they’re not in the roster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../how_tos.html#restrict-guests-to-your-email-domain-optional-once-per-course">1. Restrict guests to your email domain (Optional, once per course)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../how_tos.html#enable-the-anyone-with-the-link-can-submit-project-option">2. Enable the “Anyone with the link can submit” project option</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#grant-an-extension">Grant an extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#edit-group-members">Edit group members</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#rerun-a-test-case-or-submission">Rerun a test case or submission</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../how_tos.html#rerunning-a-stuck-or-errored-submission">Rerunning a “stuck” or “errored” submission</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#why-do-i-get-permission-denied-when-i-run-my-script-with-my-script-sh">Why do I get “permission denied” when I run my script with <code class="docutils literal notranslate"><span class="pre">./my_script.sh</span></code>?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#can-i-use-matlab">Can I use MATLAB?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hard_and_soft_deadlines.html">Hard &amp; Soft Deadlines: Recommendations and Implications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_sandbox_images.html">Building Custom Sandbox Images with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verifying_email_receipts.html">Verifying Submission Email Receipts Manually</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">“Bonus Submission” and “Late Day” Tokens</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bonus-submission-tokens">Bonus Submission Tokens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#giving-extra-bonus-submission-tokens">Giving Extra Bonus Submission Tokens</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#late-day-tokens">Late Day Tokens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#giving-extra-late-day-tokens">Giving Extra Late Day Tokens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edge-cases">Edge Cases</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Autograder.io - UI Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>“Bonus Submission” and “Late Day” Tokens</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+      
+        <a href="verifying_email_receipts.html" class="btn btn-neutral float-left" title="Verifying Submission Email Receipts Manually" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bonus-submission-and-late-day-tokens">
+<h1>“Bonus Submission” and “Late Day” Tokens<a class="headerlink" href="#bonus-submission-and-late-day-tokens" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="bonus-submission-tokens">
+<h2>Bonus Submission Tokens<a class="headerlink" href="#bonus-submission-tokens" title="Permalink to this headline">¶</a></h2>
+<p>A “bonus submission” token is a single-use token that lets a student or group
+submit beyond the project-configured <a class="reference internal" href="../getting_started/create_first_project.html#submission-limit"><span class="std std-ref">daily submission limit</span></a>.
+Using one token will allow one submission past the daily limit with normal
+feedback. If group work is enabled, tokens are allocated and used per <strong>group</strong>,
+NOT per student.</p>
+<p>Bonus submission tokens are configured and allocated per project.
+To specify the number of tokens each group should receive, go to the “Settings”
+tab of the project admin page and set the value of the
+“Bonus submissions per group” field to the appropriate number of tokens.</p>
+<img alt="../_images/initialize_bonus_submissions.png" src="../_images/initialize_bonus_submissions.png" />
+<div class="section" id="giving-extra-bonus-submission-tokens">
+<h3>Giving Extra Bonus Submission Tokens<a class="headerlink" href="#giving-extra-bonus-submission-tokens" title="Permalink to this headline">¶</a></h3>
+<p>To give <em>all</em> groups extra bonus submission tokens in the middle of a project
+cycle, simply increase the value of “Bonus submissions per group” in the project
+settings.</p>
+<p>To give <em>one</em> group extra bonus submissions, go to the “Groups &amp; Extensions” tab
+of the project admin page, select a group from the “Edit Group” dropdown,
+and increase the value of the “Bonus Submissions” field. Note that you can give
+a group extra bonus submissions even if the project-level “Bonus submissions per group”
+is zero.</p>
+<img alt="../_images/group_bonus_submissions.png" src="../_images/group_bonus_submissions.png" />
+</div>
+</div>
+<div class="section" id="late-day-tokens">
+<h2>Late Day Tokens<a class="headerlink" href="#late-day-tokens" title="Permalink to this headline">¶</a></h2>
+<p>A “late day” token is a single-use token that lets a student or group effectively
+extend their project deadline by one day. Late day tokens are used automatically
+when a student attemps to submit after the hard deadline. Once a late day token
+is used, that student/group will be able to continue submitting for 24 hours
+after the project hard deadline.</p>
+<p>Late day tokens are configured per <strong>course</strong> (NOT per project) and allocated
+per student. To specify the number of tokens each student should receive, go
+to the “Settings” tab of the course admin page and set the “Late day tokens per student”
+field to the appropriate value.</p>
+<img alt="../_images/initialize_late_days.png" src="../_images/initialize_late_days.png" />
+<div class="section" id="giving-extra-late-day-tokens">
+<h3>Giving Extra Late Day Tokens<a class="headerlink" href="#giving-extra-late-day-tokens" title="Permalink to this headline">¶</a></h3>
+<p>To give <em>all</em> students extra late day tokens at any time, simply increase the
+value of the “Late day tokens per student” field to the appropriate value.</p>
+<p>To give <em>one</em> student extra late day tokens, go to the “Late Day Tokens” tab
+of the course admin page. Select or search for a student in the dropbown menu,
+then edit the “Late Day Tokens Remaining” field that appears.</p>
+<img alt="../_images/student_late_days.png" src="../_images/student_late_days.png" />
+</div>
+<div class="section" id="edge-cases">
+<h3>Edge Cases<a class="headerlink" href="#edge-cases" title="Permalink to this headline">¶</a></h3>
+<p>Since late day tokens are allocated per student, their interaction with group
+work is complex. This section describes some of the edge cases that arise from
+this and how Autograder.io handles them.</p>
+<p>If group work is enabled and a group member uses a late day token, then every
+member of that group automatically uses a late day token as well. If any member
+of the group does not have enough tokens left, then the submission will
+<em>still be allowed</em> but will <strong>not count for the student with insufficient tokens.</strong>
+In other words, that submission will be ignored when determining that
+student’s final graded submission.</p>
+<p>If handgrading is enabled, this adds additional complexity to the above scenario
+where one group member has run out of tokens. If handgrading is enabled when
+this happens, we do <em>not</em> attempt to present multiple submissions from that
+group for handgrading. The submission that will be handgraded for that group
+will be <strong>the group’s final graded submission</strong> taking into account
+<strong>every submission from that group</strong> and <strong>ignoring late days</strong>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="verifying_email_receipts.html" class="btn btn-neutral float-left" title="Verifying Submission Email Receipts Manually" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
