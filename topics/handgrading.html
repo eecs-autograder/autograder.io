@@ -40,7 +40,8 @@
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="“Bonus Submission” and “Late Day” Tokens" href="bonus_submissions_and_late_days.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -130,7 +131,7 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Topics</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../how_tos.html">How-tos and FAQ</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#clone-a-course-or-project-for-a-new-term">Clone a Course or Project for a New Term</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#let-students-submit-even-if-they-re-not-in-the-roster">Let students submit even if they’re not in the roster</a><ul>
@@ -160,6 +161,17 @@
 <li class="toctree-l3"><a class="reference internal" href="bonus_submissions_and_late_days.html#edge-cases">Edge Cases</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Grading Style and Code Quality by Hand</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-and-configure-the-handgrading-rubric">Create and Configure the Handgrading Rubric</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configure-the-basic-settings">Configure the Basic Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-checkboxes">Add Checkboxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-annotations">Add Annotations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#grade-submissions">Grade Submissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#publish-grades-and-rubric">Publish Grades and Rubric</a></li>
 </ul>
 </li>
 </ul>
@@ -220,6 +232,13 @@
   </ul>
 
   
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+      
+        <a href="bonus_submissions_and_late_days.html" class="btn btn-neutral float-left" title="“Bonus Submission” and “Late Day” Tokens" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -232,26 +251,25 @@ be used alongside automated test cases. The two core mechanisms available for
 evaluating student code are “checkboxes,” which can be used for yes/no criteria
 that apply to broad parts of the source code, and “annotations,” which are
 pre-build comments that are applied to specific lines of the source code.</p>
-<p>Here’s an example of these two mechanisims in action:</p>
-<div class="section" id="configure-the-handgrading-rubric">
-<h2>Configure the Handgrading Rubric<a class="headerlink" href="#configure-the-handgrading-rubric" title="Permalink to this headline">¶</a></h2>
+<p>Here’s an example of our handgrading system in action:</p>
+<img alt="../_images/grading.gif" src="../_images/grading.gif" />
+<div class="section" id="create-and-configure-the-handgrading-rubric">
+<h2>Create and Configure the Handgrading Rubric<a class="headerlink" href="#create-and-configure-the-handgrading-rubric" title="Permalink to this headline">¶</a></h2>
+<p>Under the “Handgrading” tab of the project admin page, click the
+“New Handgrading Rubric” button to create an empty rubric.
+Alternatively, select a course and project to import an existing rubric from
+and click the “Import” button.</p>
+<img alt="../_images/create_rubric.png" src="../_images/create_rubric.png" />
 <div class="section" id="configure-the-basic-settings">
 <h3>Configure the Basic Settings<a class="headerlink" href="#configure-the-basic-settings" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="add-checkboxes">
-<h3>Add Checkboxes<a class="headerlink" href="#add-checkboxes" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="add-annotations">
-<h3>Add Annotations<a class="headerlink" href="#add-annotations" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="other-options">
-<h3>Other Options<a class="headerlink" href="#other-options" title="Permalink to this headline">¶</a></h3>
-<p><strong>Override max points</strong>: The example in this guide uses the “Start at 0 and add”
-points style, which causes the maximum points possible to be computed
-automatically as the sum of all <em>positive</em> checkbox points. You can override
-this value by setting the “Override max points” field to the desired value.
-Note that doing so will allow for “extra credit” if the number of points
-awarded exceeds this value.</p>
+<img alt="../_images/basic_settings.png" src="../_images/basic_settings.png" />
+<p><strong>“Start at zero and add” points style</strong>: When this points style is selected,
+the maximum number of points possible is computed automatically as the sum of
+all <em>positive</em> checkbox points (see below for info on checkboxes).
+The example in this guide uses this points style.</p>
+<p>You can override the maximum number of points possible by setting the
+“Override max points” field to the desired value. Note that doing so will
+allow for “extra credit” if the number of points awarded exceeds that value.</p>
 <p><strong>“Start at max and subtract” points style</strong>: When points style is selected,
 you must specify the maximum number of points possible. Handgrading scores
 will begin at this value, and you can apply deductions using checkboxes and
@@ -264,15 +282,45 @@ annotations, these comments do NOT have point values attached to them.</p>
 adjust the handgrading score for a submission. Checking this box will allow
 <a class="reference internal" href="../getting_started/set_up_course.html#permission-roles"><span class="std std-ref">handgraders</span></a> to do the same.</p>
 </div>
+<div class="section" id="add-checkboxes">
+<h3>Add Checkboxes<a class="headerlink" href="#add-checkboxes" title="Permalink to this headline">¶</a></h3>
+<p>To add a checkbox to your rubric, click the “New Checkbox” button and complete
+the form that appears. The “Points” field can be positive or negative.</p>
+<img alt="../_images/create_checkbox.png" src="../_images/create_checkbox.png" />
+</div>
+<div class="section" id="add-annotations">
+<h3>Add Annotations<a class="headerlink" href="#add-annotations" title="Permalink to this headline">¶</a></h3>
+<p>Annotations are pre-formed comments with an optional points deduction that can
+be applied to specific lines of source code. The “Points” value must be zero or
+negative.</p>
+<p>The “Max deduction” field, if not blank, specifies the maximum number of points
+to deduct from a student’s score from applications of this annotation. In the
+example below, even if we marked four instances of duplicated code in a
+student’s source code, that student would only lose one point.</p>
+<img alt="../_images/create_annotation.png" src="../_images/create_annotation.png" />
+<p>When we’re done adding all our checkboxes and annotations, it will look
+something like this:</p>
+<img alt="../_images/checkboxes_and_annotations_created.png" src="../_images/checkboxes_and_annotations_created.png" />
+</div>
 </div>
 <div class="section" id="grade-submissions">
 <h2>Grade Submissions<a class="headerlink" href="#grade-submissions" title="Permalink to this headline">¶</a></h2>
+<p>Admins, staff, and handgraders can go to the project page and click on the
+“Handgrading” tab to start grading student submissions. We recommend that
+graders coordinate amongst themselves to avoid grading the same submissions,
+as Autograder.io doesn’t provide any safeguards against this.</p>
+<p>Select a submission from the left sidebar, check the appropriate checkboxes,
+add annotations as needed, and then click the “Done” checkbox in the
+bottom-right corner before moving on to the next submission.</p>
+<img alt="../_images/grading.gif" src="../_images/grading.gif" />
 </div>
 <div class="section" id="publish-grades-and-rubric">
 <h2>Publish Grades and Rubric<a class="headerlink" href="#publish-grades-and-rubric" title="Permalink to this headline">¶</a></h2>
 <p>In the “Handgrading” tab on the project admin page, check the
 “Publish grades and rubric” box and click “Save” to publish handgrading scores.
 A new tab will appear on the project page where students can view their score.</p>
+<img alt="../_images/publish_grades.png" src="../_images/publish_grades.png" />
+<img alt="../_images/view_handgrading_score.png" src="../_images/view_handgrading_score.png" />
 </div>
 </div>
 
@@ -281,6 +329,13 @@ A new tab will appear on the project page where students can view their score.</
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="bonus_submissions_and_late_days.html" class="btn btn-neutral float-left" title="“Bonus Submission” and “Late Day” Tokens" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
