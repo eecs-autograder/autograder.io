@@ -24,6 +24,8 @@ Click the gear icon for your new course to enter the course admin page.
 Next, hover over the "Roster" tab and click on one of the roles listed in the
 dropdown menu. The roles are as follows:
 
+.. _permission-roles:
+
 * **Admin**: Admins have full edit permissions for the course.
   That includes changing user permissions, editing projects and test cases, etc.
   Admins can also look up students' submissions with any feedback level.

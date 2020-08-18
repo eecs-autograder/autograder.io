@@ -1,0 +1,53 @@
+Grading Style and Code Quality by Hand
+======================================
+Autograder.io provides a system for evaluating student code by hand that can
+be used alongside automated test cases. The two core mechanisms available for
+evaluating student code are "checkboxes," which can be used for yes/no criteria
+that apply to broad parts of the source code, and "annotations," which are
+pre-build comments that are applied to specific lines of the source code.
+
+Here's an example of these two mechanisims in action:
+
+Configure the Handgrading Rubric
+--------------------------------
+
+Configure the Basic Settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Add Checkboxes
+^^^^^^^^^^^^^^
+
+Add Annotations
+^^^^^^^^^^^^^^^
+
+Other Options
+^^^^^^^^^^^^^
+**Override max points**: The example in this guide uses the "Start at 0 and add"
+points style, which causes the maximum points possible to be computed
+automatically as the sum of all *positive* checkbox points. You can override
+this value by setting the "Override max points" field to the desired value.
+Note that doing so will allow for "extra credit" if the number of points
+awarded exceeds this value.
+
+**"Start at max and subtract" points style**: When points style is selected,
+you must specify the maximum number of points possible. Handgrading scores
+will begin at this value, and you can apply deductions using checkboxes and
+annotations as desired.
+
+**Handgraders can leave comments**: Staff and admins by default can leave
+arbitrary comments when handgrading student code. Checking this box will allow
+:ref:`handgraders <permission-roles>` to do the same. Note that unlike
+annotations, these comments do NOT have point values attached to them.
+
+**Handgraders can adjust points**: Staff and admins by default can arbitrarily
+adjust the handgrading score for a submission. Checking this box will allow
+:ref:`handgraders <permission-roles>` to do the same.
+
+Grade Submissions
+-----------------
+
+Publish Grades and Rubric
+-------------------------
+In the "Handgrading" tab on the project admin page, check the
+"Publish grades and rubric" box and click "Save" to publish handgrading scores.
+A new tab will appear on the project page where students can view their score.

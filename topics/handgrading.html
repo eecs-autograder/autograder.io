@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Verifying Submission Email Receipts Manually &mdash; Autograder.io - UI Docs  documentation</title>
+  <title>Grading Style and Code Quality by Hand &mdash; Autograder.io - UI Docs  documentation</title>
   
 
   
@@ -40,9 +40,7 @@
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="“Bonus Submission” and “Late Day” Tokens" href="bonus_submissions_and_late_days.html" />
-    <link rel="prev" title="Building Custom Sandbox Images with Docker" href="custom_sandbox_images.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -132,7 +130,7 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Topics</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../how_tos.html">How-tos and FAQ</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#clone-a-course-or-project-for-a-new-term">Clone a Course or Project for a New Term</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#let-students-submit-even-if-they-re-not-in-the-roster">Let students submit even if they’re not in the roster</a><ul>
@@ -152,7 +150,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hard_and_soft_deadlines.html">Hard &amp; Soft Deadlines: Recommendations and Implications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_sandbox_images.html">Building Custom Sandbox Images with Docker</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Verifying Submission Email Receipts Manually</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verifying_email_receipts.html">Verifying Submission Email Receipts Manually</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bonus_submissions_and_late_days.html">“Bonus Submission” and “Late Day” Tokens</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="bonus_submissions_and_late_days.html#bonus-submission-tokens">Bonus Submission Tokens</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="bonus_submissions_and_late_days.html#giving-extra-bonus-submission-tokens">Giving Extra Bonus Submission Tokens</a></li>
@@ -211,7 +209,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Verifying Submission Email Receipts Manually</li>
+      <li>Grading Style and Code Quality by Hand</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -223,61 +221,59 @@
   </ul>
 
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="bonus_submissions_and_late_days.html" class="btn btn-neutral float-right" title="“Bonus Submission” and “Late Day” Tokens" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="custom_sandbox_images.html" class="btn btn-neutral float-left" title="Building Custom Sandbox Images with Docker" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-  </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="verifying-submission-email-receipts-manually">
-<h1>Verifying Submission Email Receipts Manually<a class="headerlink" href="#verifying-submission-email-receipts-manually" title="Permalink to this headline">¶</a></h1>
-<p>Submission email receipts can be verified by visiting the verification link
-in the email or manually using GPG.</p>
-<p>First, save the content of the email to a file, say <code class="code docutils literal notranslate"><span class="pre">message.txt.asc</span></code>. The
-message will look similar to this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
-
-We&#39;ve received a submission from jameslp@umich.edu
-at 2020-08-11 17:47:45.299808+00:00 UTC for Course 1 Project 1.
-The submission&#39;s database ID is 11279.
-
-Please visit localhost/web/project/1?current_tab=my_submissions
-to view your results as they become available.
------BEGIN PGP SIGNATURE-----
-
-iQEzBAEBCgAdFiEE/KlKaWel+jf6avHPaGFpaKhlsuMFAl8y2cEACgkQaGFpaKhl
-suPmJQgAnjvkpnX8ZYrzFd5QdwAM4sbVK+20lFcBAqRNNBy/EXEoMlf0i+FzDDhw
-DVfPav/iLnHegF+UNUA2jRcdawpBUnOVmvhd8Ig7BNht6dESyjBa+9VdhzbTlPp1
-Vx7KAZgTvOeJ6w4FcRjQRDtK3+hEnnScDyyhVXO/EodoBBdToW058cHcuKuuC+wz
-TP19qChz86j7sreItz11V5gxwDhgSTEA8KJ1NTe4HuYdVaAIdvldzdc8TsnFjcYy
-JR/QNGIDN/YWNQ+8g2zek8TySCo8OuCejFQipF2N/xRZ8GgqFAjR8YAPuukSS8BX
-mhr2uQtIZNaFz+XcQXPTNmmFfOnvQA==
-=Nzai
------END PGP SIGNATURE-----
-</pre></div>
+  <div class="section" id="grading-style-and-code-quality-by-hand">
+<h1>Grading Style and Code Quality by Hand<a class="headerlink" href="#grading-style-and-code-quality-by-hand" title="Permalink to this headline">¶</a></h1>
+<p>Autograder.io provides a system for evaluating student code by hand that can
+be used alongside automated test cases. The two core mechanisms available for
+evaluating student code are “checkboxes,” which can be used for yes/no criteria
+that apply to broad parts of the source code, and “annotations,” which are
+pre-build comments that are applied to specific lines of the source code.</p>
+<p>Here’s an example of these two mechanisims in action:</p>
+<div class="section" id="configure-the-handgrading-rubric">
+<h2>Configure the Handgrading Rubric<a class="headerlink" href="#configure-the-handgrading-rubric" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="configure-the-basic-settings">
+<h3>Configure the Basic Settings<a class="headerlink" href="#configure-the-basic-settings" title="Permalink to this headline">¶</a></h3>
 </div>
-<p>Next, download and import Autograder.io’s public key. If you’re using
-a custom deployment of Autograder.io, replace <code class="code docutils literal notranslate"><span class="pre">autograder.io</span></code> with your domain
-in the url below:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ curl -sSL https://autograder.io/api/gpg_public_key/ | gpg --import -
-</pre></div>
+<div class="section" id="add-checkboxes">
+<h3>Add Checkboxes<a class="headerlink" href="#add-checkboxes" title="Permalink to this headline">¶</a></h3>
 </div>
-<p>Finally, verify the sender authenticity of the signed message:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ gpg --always-trust --verify message.txt.asc
-gpg: Signature made Tue 11 Aug 2020 01:47:45 PM EDT
-gpg:                using RSA key FCA94A6967A5FA37FA6AF1CF68616968A865B2E3
-gpg: Good signature from &quot;Autogenerated Key &lt;admin@autograder.io&gt;&quot; [unknown]
-gpg: WARNING: Using untrusted key!
-</pre></div>
+<div class="section" id="add-annotations">
+<h3>Add Annotations<a class="headerlink" href="#add-annotations" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="other-options">
+<h3>Other Options<a class="headerlink" href="#other-options" title="Permalink to this headline">¶</a></h3>
+<p><strong>Override max points</strong>: The example in this guide uses the “Start at 0 and add”
+points style, which causes the maximum points possible to be computed
+automatically as the sum of all <em>positive</em> checkbox points. You can override
+this value by setting the “Override max points” field to the desired value.
+Note that doing so will allow for “extra credit” if the number of points
+awarded exceeds this value.</p>
+<p><strong>“Start at max and subtract” points style</strong>: When points style is selected,
+you must specify the maximum number of points possible. Handgrading scores
+will begin at this value, and you can apply deductions using checkboxes and
+annotations as desired.</p>
+<p><strong>Handgraders can leave comments</strong>: Staff and admins by default can leave
+arbitrary comments when handgrading student code. Checking this box will allow
+<a class="reference internal" href="../getting_started/set_up_course.html#permission-roles"><span class="std std-ref">handgraders</span></a> to do the same. Note that unlike
+annotations, these comments do NOT have point values attached to them.</p>
+<p><strong>Handgraders can adjust points</strong>: Staff and admins by default can arbitrarily
+adjust the handgrading score for a submission. Checking this box will allow
+<a class="reference internal" href="../getting_started/set_up_course.html#permission-roles"><span class="std std-ref">handgraders</span></a> to do the same.</p>
+</div>
+</div>
+<div class="section" id="grade-submissions">
+<h2>Grade Submissions<a class="headerlink" href="#grade-submissions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="publish-grades-and-rubric">
+<h2>Publish Grades and Rubric<a class="headerlink" href="#publish-grades-and-rubric" title="Permalink to this headline">¶</a></h2>
+<p>In the “Handgrading” tab on the project admin page, check the
+“Publish grades and rubric” box and click “Save” to publish handgrading scores.
+A new tab will appear on the project page where students can view their score.</p>
 </div>
 </div>
 
@@ -286,15 +282,6 @@ gpg: WARNING: Using untrusted key!
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="bonus_submissions_and_late_days.html" class="btn btn-neutral float-right" title="“Bonus Submission” and “Late Day” Tokens" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="custom_sandbox_images.html" class="btn btn-neutral float-left" title="Building Custom Sandbox Images with Docker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
