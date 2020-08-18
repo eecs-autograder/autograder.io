@@ -34,7 +34,7 @@ pull requests to our
     how_tos
     topics/hard_and_soft_deadlines
     topics/custom_sandbox_images
-    topics/verifying_email_receipts
+..    topics/verifying_email_receipts
     topics/bonus_submissions_and_late_days
 ..    topics/handgrading
 ..    topics/mutation_testing
