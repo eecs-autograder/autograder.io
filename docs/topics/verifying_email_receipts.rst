@@ -93,6 +93,9 @@ in the url below:
 
     $ curl -sSL https://autograder.io/api/gpg_public_key/ | gpg --import -
 
+If curl is unable to verify the site's certificate, you can visit the URL in
+your browser instead.
+
 Finally, verify the sender authenticity of the signed message:
 
 .. code-block:: none
