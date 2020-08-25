@@ -1,33 +1,88 @@
-Verifying Submission Email Receipts Manually
-============================================
-Submission email receipts can be verified by visiting the verification link
-in the email or manually using GPG.
+Submission Email Receipts
+=========================
+Submission email receipts can be enabled on the project admin page under the
+"Settings" tab. Scroll down towards the bottom of the page to find the section
+labelled "Email Receipts."
 
-First, save the content of the email to a file, say :code:`message.txt.asc`. The
-message will look similar to this:
+.. image:: /pics/topics/email_receipts/email_settings.png
+
+When "Send submission received email" is checked, students will receive an
+email as soon as the submission is recorded in the database.
+
+When "Send score summary email" is checked, students will receive an email once
+all non-deferred tests are finished grading. The email will contain a summary
+of their score for that submission (for non-deferred tests only). The summary
+uses the "Normal" feedback category unless the submission is past the daily
+limit, in which case it uses the "Past limit" feedback category. In other words
+students will see no more information than they would by going to the
+"My Submissions" tab of the project page and viewing the submission there.
+
+These options are independent of each other. You can select either, both, or
+neither of them.
+
+Verifying Submission Emails with the Verification Link
+------------------------------------------------------
+Submission emails contain a URL that, when visited, verifies the GPG signature
+of the email contents.
+
+.. image:: /pics/topics/email_receipts/verification_link.png
+
+.. image:: /pics/topics/email_receipts/verified_email.png
+
+Verifying Submission Email Receipts Manually
+--------------------------------------------
+IMPORTANT: There are several steps you must follow to make sure that you have
+the original, unencoded email content. Copy-pasting from your email client
+WILL NOT WORK.
+
+Submission email receipts can be cryptographically verified manually using GPG.
+
+First, save the MIME-encoded plaintext content of the email to a file, say
+:code:`message.txt.quoted`. In Gmail this can be accessed by clicking
+"Show original" in the overflow menu. Save the contents starting with
+:code:`-----BEGIN PGP SIGNED MESSAGE-----` and
+ending with :code:`-----END PGP SIGNATURE-----`
 
 .. code-block:: none
 
     -----BEGIN PGP SIGNED MESSAGE-----
     Hash: SHA512
 
-    We've received a submission from jameslp@umich.edu
-    at 2020-08-11 17:47:45.299808+00:00 UTC for Course 1 Project 1.
-    The submission's database ID is 11279.
+    This email contains a summary of your score for
+    all non-deferred test cases on the submission from jameslp@umich.edu
+    at 2020-08-25 14:19:12.028297+00:00 UTC for jameslp-test Send Emails.
+    The submission's database ID is 760901.
 
-    Please visit localhost/web/project/1?current_tab=my_submissions
-    to view your results as they become available.
+    Please visit autograder.io/web/project/757?current_tab=3Dmy_submissions
+    to view all available details on these results.
+
+
+    Suite 1:
+    =09Test 1: 1/1
+
+
+
+    Total: 1/1
     -----BEGIN PGP SIGNATURE-----
 
-    iQEzBAEBCgAdFiEE/KlKaWel+jf6avHPaGFpaKhlsuMFAl8y2cEACgkQaGFpaKhl
-    suPmJQgAnjvkpnX8ZYrzFd5QdwAM4sbVK+20lFcBAqRNNBy/EXEoMlf0i+FzDDhw
-    DVfPav/iLnHegF+UNUA2jRcdawpBUnOVmvhd8Ig7BNht6dESyjBa+9VdhzbTlPp1
-    Vx7KAZgTvOeJ6w4FcRjQRDtK3+hEnnScDyyhVXO/EodoBBdToW058cHcuKuuC+wz
-    TP19qChz86j7sreItz11V5gxwDhgSTEA8KJ1NTe4HuYdVaAIdvldzdc8TsnFjcYy
-    JR/QNGIDN/YWNQ+8g2zek8TySCo8OuCejFQipF2N/xRZ8GgqFAjR8YAPuukSS8BX
-    mhr2uQtIZNaFz+XcQXPTNmmFfOnvQA==
-    =Nzai
+    iQEzBAEBCgAdFiEEz9QEQv6o93rm9kENmpgnFC2y9b8FAl9FHecACgkQmpgnFC2y
+    9b/XlwgAhnh5NIlxZan2lIyiRTRgbvN3GbdjkwruGmEZ57nwo2oqWXDe3eQayVoq
+    RxmC8nuBnxJUs2nWlkA3kkd5eMmw8dBB63k8B5w0nuFfP+idmmWIK5I7YkFLrlII
+    rJhSE2kMdI321QTJ/nqi3xuHTzaQ6L3NNTfKR+XMsGCBG1VzGodi1K5q/eKjw1ci
+    zF1r0Taf5oMCfJQxOpAu84ntNdeC+7yKRcQVXUGEoYDADf/TdUjq6lRbyu2118DC
+    A9xMrXE3yjGLJpYKB0JPHOwahSxnnhRXho/tJphlZyaW8TI7mKka3yvF/gVWQ2qo
+    sx4xOE+valgXhEP3kfLtf7YrESeXoQ=3D=3D
+    =3DfClI
     -----END PGP SIGNATURE-----
+
+Next, decode the message from MIME-quoted into plaintext.
+The code below uses Python 3.
+
+.. code-block:: python3
+
+    from quopri import decode
+    with open('message.txt.quoted') as f, open('message.txt.asc', 'wb') as out:
+        decode(f, out)
 
 
 Next, download and import Autograder.io's public key. If you're using
