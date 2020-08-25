@@ -328,6 +328,8 @@ in the url below:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ curl -sSL https://autograder.io/api/gpg_public_key/ | gpg --import -
 </pre></div>
 </div>
+<p>If curl is unable to verify the site’s certificate, you can visit the URL in
+your browser instead.</p>
 <p>Finally, verify the sender authenticity of the signed message:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ gpg --always-trust --verify message.txt.asc
 gpg: Signature made Tue 11 Aug 2020 01:47:45 PM EDT
