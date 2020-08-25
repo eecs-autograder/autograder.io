@@ -36,6 +36,6 @@ pull requests to our
     topics/custom_sandbox_images
     topics/bonus_submissions_and_late_days
     topics/handgrading
-..    topics/verifying_email_receipts
+    topics/verifying_email_receipts
 ..    topics/mutation_testing
 ..    topics/advanced_test_case_settings
