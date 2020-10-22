@@ -3,9 +3,12 @@ Setting Up Your Course
 
 First-time course creation
 --------------------------
-If you are creating a course for the first time, contact `help@autograder.io`
-(or your system administrator if running on your institution's servers)
-for assistance.
+**Note for students:** If you can't find your course on the home page, please contact
+your instructor to be added to the roster.
+
+If you are creating a course for the first time, contact your system
+administrator for assistance. Instructors at University of Michigan can
+contact `help@autograder.io`.
 
 .. _copy-course:
 
