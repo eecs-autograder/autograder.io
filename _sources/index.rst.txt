@@ -7,6 +7,9 @@ the details of how to run them. Autograder.io is primarily developed and
 maintained at the Computer Science department of the University of Michigan,
 where it supports 4600 students per semester spread across a dozen courses.
 
+This documentation is intended for instructors. If you are a student,
+please contact your instructor for assistance.
+
 .. rubric:: Autograder.io offers:
 
 * State-of-the-art security using Docker containers as a foundation.
