@@ -48,9 +48,9 @@ image with and select the image in the "Sandbox environment" dropdown.
 
 Tips and Tricks
 ---------------
-To preserve system integrity, we place time, memory, and cpu usage limits on
-image builds. This can cause some build tasks to time out even if they
-succeed on your local machine.
+To preserve system integrity, we place a 10 limit time limit and some memory
+and cpu usage limits on image builds. This can cause some build tasks to time
+out even if they succeed on your local machine.
 
 The easiest way around this is to use a base image as follows:
 

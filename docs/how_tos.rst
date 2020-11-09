@@ -131,5 +131,6 @@ the constraints that Autograder.io puts on sandbox images.
 
 Why does my sandbox image build time out?
 -----------------------------------------
-To preserve system integrity, we place memory and cpu usage limits on image
-builds. See :ref:`here <image-build-tricks>` for workarounds.
+To preserve system integrity, we place a 10 minute time limit and some
+memory and cpu usage limits on image builds.
+See :ref:`here <image-build-tricks>` for workarounds.
