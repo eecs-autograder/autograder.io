@@ -148,10 +148,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#why-do-i-get-permission-denied-when-i-run-my-script-with-my-script-sh">Why do I get “permission denied” when I run my script with <code class="docutils literal notranslate"><span class="pre">./my_script.sh</span></code>?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#can-i-use-matlab">Can I use MATLAB?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-does-my-sandbox-image-build-time-out">Why does my sandbox image build time out?</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="topics/hard_and_soft_deadlines.html">Hard &amp; Soft Deadlines: Recommendations and Implications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="topics/custom_sandbox_images.html">Building Custom Sandbox Images with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="topics/custom_sandbox_images.html">Building Custom Sandbox Images with Docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="topics/custom_sandbox_images.html#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="topics/bonus_submissions_and_late_days.html">“Bonus Submission” and “Late Day” Tokens</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="topics/bonus_submissions_and_late_days.html#bonus-submission-tokens">Bonus Submission Tokens</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="topics/bonus_submissions_and_late_days.html#giving-extra-bonus-submission-tokens">Giving Extra Bonus Submission Tokens</a></li>
@@ -357,6 +361,11 @@ script by invoking the appropriate interpreter, e.g. <code class="code docutils 
 <cite>Octave &lt;https://www.gnu.org/software/octave/&gt;</cite> interpreter in their autograder
 sandbox images. MATLAB’s proprietary nature makes it difficult to install under
 the constraints that Autograder.io puts on sandbox images.</p>
+</div>
+<div class="section" id="why-does-my-sandbox-image-build-time-out">
+<h2>Why does my sandbox image build time out?<a class="headerlink" href="#why-does-my-sandbox-image-build-time-out" title="Permalink to this headline">¶</a></h2>
+<p>To preserve system integrity, we place memory and cpu usage limits on image
+builds. See <a class="reference internal" href="topics/custom_sandbox_images.html#image-build-tricks"><span class="std std-ref">here</span></a> for workarounds.</p>
 </div>
 </div>
 

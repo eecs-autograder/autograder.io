@@ -43,3 +43,26 @@ project. Under the "Test Cases" tab, select the test suite you want to use the
 image with and select the image in the "Sandbox environment" dropdown.
 
 .. image:: /pics/topics/custom_sandbox_images/use_custom_image.gif
+
+.. _image-build-tricks:
+
+Tips and Tricks
+---------------
+To preserve system integrity, we place time, memory, and cpu usage limits on
+image builds. This can cause some build tasks to time out even if they
+succeed on your local machine.
+
+The easiest way around this is to use a base image as follows:
+
+1. Create an account on `DockerHub <https://hub.docker.com/>`_.
+2. Build your image on your local machine.
+3. Tag your image as ``<dockerhub username>/<image name>:<version>``, i.e.
+   ``my_account/my_image:1``
+    * Note: You should increment the image version each time you update it.
+4. Push your image to DockerHub.
+5. Create a Dockerfile that inherits from the published image, i.e.::
+
+    FROM my_account/my_image:1
+
+6. Start an image build task on the course admin page using that Dockerfile.
+   The published image will be pulled and the build will finish quickly.

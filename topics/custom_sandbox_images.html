@@ -148,10 +148,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#why-do-i-get-permission-denied-when-i-run-my-script-with-my-script-sh">Why do I get “permission denied” when I run my script with <code class="docutils literal notranslate"><span class="pre">./my_script.sh</span></code>?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../how_tos.html#can-i-use-matlab">Can I use MATLAB?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../how_tos.html#why-does-my-sandbox-image-build-time-out">Why does my sandbox image build time out?</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hard_and_soft_deadlines.html">Hard &amp; Soft Deadlines: Recommendations and Implications</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Building Custom Sandbox Images with Docker</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building Custom Sandbox Images with Docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tips-and-tricks">Tips and Tricks</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="bonus_submissions_and_late_days.html">“Bonus Submission” and “Late Day” Tokens</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="bonus_submissions_and_late_days.html#bonus-submission-tokens">Bonus Submission Tokens</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="bonus_submissions_and_late_days.html#giving-extra-bonus-submission-tokens">Giving Extra Bonus Submission Tokens</a></li>
@@ -289,6 +293,33 @@ the “Rebuild …” section. Upload your files and click “Rebuild.”</p>
 project. Under the “Test Cases” tab, select the test suite you want to use the
 image with and select the image in the “Sandbox environment” dropdown.</p>
 <img alt="../_images/use_custom_image.gif" src="../_images/use_custom_image.gif" />
+<div class="section" id="tips-and-tricks">
+<span id="image-build-tricks"></span><h2>Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permalink to this headline">¶</a></h2>
+<p>To preserve system integrity, we place time, memory, and cpu usage limits on
+image builds. This can cause some build tasks to time out even if they
+succeed on your local machine.</p>
+<p>The easiest way around this is to use a base image as follows:</p>
+<ol class="arabic">
+<li><p>Create an account on <a class="reference external" href="https://hub.docker.com/">DockerHub</a>.</p></li>
+<li><p>Build your image on your local machine.</p></li>
+<li><p>Tag your image as <code class="docutils literal notranslate"><span class="pre">&lt;dockerhub</span> <span class="pre">username&gt;/&lt;image</span> <span class="pre">name&gt;:&lt;version&gt;</span></code>, i.e.
+<code class="docutils literal notranslate"><span class="pre">my_account/my_image:1</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Note: You should increment the image version each time you update it.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Push your image to DockerHub.</p></li>
+<li><p>Create a Dockerfile that inherits from the published image, i.e.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FROM</span> <span class="n">my_account</span><span class="o">/</span><span class="n">my_image</span><span class="p">:</span><span class="mi">1</span>
+</pre></div>
+</div>
+</li>
+<li><p>Start an image build task on the course admin page using that Dockerfile.
+The published image will be pulled and the build will finish quickly.</p></li>
+</ol>
+</div>
 </div>
 
 

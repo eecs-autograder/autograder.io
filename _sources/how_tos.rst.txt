@@ -128,3 +128,8 @@ Sort of. Courses using Autograder.io that teach MATLAB typically use the
 `Octave <https://www.gnu.org/software/octave/>` interpreter in their autograder
 sandbox images. MATLAB's proprietary nature makes it difficult to install under
 the constraints that Autograder.io puts on sandbox images.
+
+Why does my sandbox image build time out?
+-----------------------------------------
+To preserve system integrity, we place memory and cpu usage limits on image
+builds. See :ref:`here <image-build-tricks>` for workarounds.
