@@ -40,5 +40,6 @@ pull requests to our
     topics/bonus_submissions_and_late_days
     topics/handgrading
     topics/verifying_email_receipts
+    topics/reject_submission
 ..    topics/mutation_testing
 ..    topics/advanced_test_case_settings
