@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Submission Email Receipts &mdash; Autograder.io - UI Docs  documentation</title>
+  <title>Rejecting Submissions that Fail Required Checks &mdash; Autograder.io - UI Docs  documentation</title>
   
 
   
@@ -41,8 +41,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Rejecting Submissions that Fail Required Checks" href="reject_submission.html" />
-    <link rel="prev" title="Grading Style and Code Quality by Hand" href="handgrading.html" /> 
+    <link rel="prev" title="Submission Email Receipts" href="verifying_email_receipts.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -179,13 +178,13 @@
 <li class="toctree-l2"><a class="reference internal" href="handgrading.html#publish-grades-and-rubric">Publish Grades and Rubric</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Submission Email Receipts</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#verifying-submission-emails-with-the-verification-link">Verifying Submission Emails with the Verification Link</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#verifying-submission-email-receipts-manually">Verifying Submission Email Receipts Manually</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verifying_email_receipts.html">Submission Email Receipts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="verifying_email_receipts.html#verifying-submission-emails-with-the-verification-link">Verifying Submission Emails with the Verification Link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="verifying_email_receipts.html#verifying-submission-email-receipts-manually">Verifying Submission Email Receipts Manually</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="reject_submission.html">Rejecting Submissions that Fail Required Checks</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="reject_submission.html#caveat-late-day-tokens">Caveat: Late Day Tokens</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Rejecting Submissions that Fail Required Checks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#caveat-late-day-tokens">Caveat: Late Day Tokens</a></li>
 </ul>
 </li>
 </ul>
@@ -234,7 +233,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Submission Email Receipts</li>
+      <li>Rejecting Submissions that Fail Required Checks</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -248,10 +247,8 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="reject_submission.html" class="btn btn-neutral float-right" title="Rejecting Submissions that Fail Required Checks" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="handgrading.html" class="btn btn-neutral float-left" title="Grading Style and Code Quality by Hand" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="verifying_email_receipts.html" class="btn btn-neutral float-left" title="Submission Email Receipts" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -260,95 +257,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="submission-email-receipts">
-<h1>Submission Email Receipts<a class="headerlink" href="#submission-email-receipts" title="Permalink to this headline">¶</a></h1>
-<p>Submission email receipts can be enabled on the project admin page under the
-“Settings” tab. Scroll down towards the bottom of the page to find the section
-labelled “Email Receipts.”</p>
-<img alt="../_images/email_settings.png" src="../_images/email_settings.png" />
-<p>When “Send submission received email” is checked, students will receive an
-email as soon as the submission is recorded in the database.</p>
-<p>When “Send score summary email” is checked, students will receive an email once
-all non-deferred tests are finished grading. The email will contain a summary
-of their score for that submission (for non-deferred tests only). The summary
-uses the “Normal” feedback category unless the submission is past the daily
-limit, in which case it uses the “Past limit” feedback category. In other words
-students will see no more information than they would by going to the
-“My Submissions” tab of the project page and viewing the submission there.</p>
-<p>These options are independent of each other. You can select either, both, or
-neither of them.</p>
-<div class="section" id="verifying-submission-emails-with-the-verification-link">
-<h2>Verifying Submission Emails with the Verification Link<a class="headerlink" href="#verifying-submission-emails-with-the-verification-link" title="Permalink to this headline">¶</a></h2>
-<p>Submission emails contain a URL that, when visited, verifies the GPG signature
-of the email contents.</p>
-<img alt="../_images/verification_link.png" src="../_images/verification_link.png" />
-<img alt="../_images/verified_email.png" src="../_images/verified_email.png" />
-</div>
-<div class="section" id="verifying-submission-email-receipts-manually">
-<h2>Verifying Submission Email Receipts Manually<a class="headerlink" href="#verifying-submission-email-receipts-manually" title="Permalink to this headline">¶</a></h2>
-<p>IMPORTANT: There are several steps you must follow to make sure that you have
-the original, unencoded email content. Copy-pasting from your email client
-WILL NOT WORK.</p>
-<p>Submission email receipts can be cryptographically verified manually using GPG.</p>
-<p>First, save the MIME-encoded plaintext content of the email to a file, say
-<code class="code docutils literal notranslate"><span class="pre">message.txt.quoted</span></code>. In Gmail this can be accessed by clicking
-“Show original” in the overflow menu. Save the contents starting with
-<code class="code docutils literal notranslate"><span class="pre">-----BEGIN</span> <span class="pre">PGP</span> <span class="pre">SIGNED</span> <span class="pre">MESSAGE-----</span></code> and
-ending with <code class="code docutils literal notranslate"><span class="pre">-----END</span> <span class="pre">PGP</span> <span class="pre">SIGNATURE-----</span></code></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
-
-This email contains a summary of your score for
-all non-deferred test cases on the submission from jameslp@umich.edu
-at 2020-08-25 14:19:12.028297+00:00 UTC for jameslp-test Send Emails.
-The submission&#39;s database ID is 760901.
-
-Please visit autograder.io/web/project/757?current_tab=3Dmy_submissions
-to view all available details on these results.
-
-
-Suite 1:
-=09Test 1: 1/1
-
-
-
-Total: 1/1
------BEGIN PGP SIGNATURE-----
-
-iQEzBAEBCgAdFiEEz9QEQv6o93rm9kENmpgnFC2y9b8FAl9FHecACgkQmpgnFC2y
-9b/XlwgAhnh5NIlxZan2lIyiRTRgbvN3GbdjkwruGmEZ57nwo2oqWXDe3eQayVoq
-RxmC8nuBnxJUs2nWlkA3kkd5eMmw8dBB63k8B5w0nuFfP+idmmWIK5I7YkFLrlII
-rJhSE2kMdI321QTJ/nqi3xuHTzaQ6L3NNTfKR+XMsGCBG1VzGodi1K5q/eKjw1ci
-zF1r0Taf5oMCfJQxOpAu84ntNdeC+7yKRcQVXUGEoYDADf/TdUjq6lRbyu2118DC
-A9xMrXE3yjGLJpYKB0JPHOwahSxnnhRXho/tJphlZyaW8TI7mKka3yvF/gVWQ2qo
-sx4xOE+valgXhEP3kfLtf7YrESeXoQ=3D=3D
-=3DfClI
------END PGP SIGNATURE-----
-</pre></div>
-</div>
-<p>Next, decode the message from MIME-quoted into plaintext.
-The code below uses Python 3.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">quopri</span> <span class="kn">import</span> <span class="n">decode</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;message.txt.quoted&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;message.txt.asc&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out</span><span class="p">:</span>
-    <span class="n">decode</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Next, download and import Autograder.io’s public key. If you’re using
-a custom deployment of Autograder.io, replace <code class="code docutils literal notranslate"><span class="pre">autograder.io</span></code> with your domain
-in the url below:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ curl -sSL https://autograder.io/api/gpg_public_key/ | gpg --import -
-</pre></div>
-</div>
-<p>If curl is unable to verify the site’s certificate, you can visit the URL in
-your browser instead.</p>
-<p>Finally, verify the sender authenticity of the signed message:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ gpg --always-trust --verify message.txt.asc
-gpg: Signature made Tue 11 Aug 2020 01:47:45 PM EDT
-gpg:                using RSA key FCA94A6967A5FA37FA6AF1CF68616968A865B2E3
-gpg: Good signature from &quot;Autogenerated Key &lt;admin@autograder.io&gt;&quot; [unknown]
-gpg: WARNING: Using untrusted key!
-</pre></div>
-</div>
+  <div class="section" id="rejecting-submissions-that-fail-required-checks">
+<h1>Rejecting Submissions that Fail Required Checks<a class="headerlink" href="#rejecting-submissions-that-fail-required-checks" title="Permalink to this headline">¶</a></h1>
+<p>In some situations, instructors may want to reject a submission that fails
+to meet certain criteria. A rejected submission will NOT count towards the
+student’s daily limit, nor will it use a student’s bonus submission tokens.</p>
+<p>This feature can be enabled with the following steps:</p>
+<ol class="arabic simple">
+<li><p>Add a test suite and move it so that it is the <strong>FIRST</strong> test suite for your
+project.</p></li>
+<li><p>Set the setup command for that suite so that it performs your desired checks.</p></li>
+<li><p>Check the “Reject submission if setup fails” box just below the setup command.</p></li>
+</ol>
+<img alt="../_images/reject_submission_config.png" src="../_images/reject_submission_config.png" />
+<p>If a student submission is rejected, the student will see something akin to
+this on the submission page:</p>
+<img alt="../_images/rejected_submission.png" src="../_images/rejected_submission.png" />
+<p>We recommend setting the feedback settings for this setup command to “Public”
+so that students can see why their submission was rejected.</p>
+<div class="section" id="caveat-late-day-tokens">
+<h2>Caveat: Late Day Tokens<a class="headerlink" href="#caveat-late-day-tokens" title="Permalink to this headline">¶</a></h2>
+<p>If a student uses a late day token and that submission is rejected, the late
+day token will NOT be refunded. However, the student will still be able to
+continue submitting for the duration allowed by using that token.</p>
 </div>
 </div>
 
@@ -360,10 +291,8 @@ gpg: WARNING: Using untrusted key!
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="reject_submission.html" class="btn btn-neutral float-right" title="Rejecting Submissions that Fail Required Checks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="handgrading.html" class="btn btn-neutral float-left" title="Grading Style and Code Quality by Hand" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="verifying_email_receipts.html" class="btn btn-neutral float-left" title="Submission Email Receipts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
