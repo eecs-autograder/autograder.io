@@ -1,6 +1,16 @@
 # Typescript/Vue Coding Standards
 
 Typescript and Vue projects should use TSLint/ESLint to enforce these standards where possible.
+Extisting projects already have this set up as part of the continuous integration checks.
+
+## A Note on Auto-Formatters
+When contributing, please do NOT run any auto-formatting tools on the source code. Since such
+tools are ofter highly opinionated, they can clutter pull requests with formatting-only changes
+and make it harder for me to review your code.
+
+If this document is agnostic on a particular element style, follow the convention used in the
+file you are editing. If you're writing a new file, try to follow the convention used in another
+similar file.
 
 ## Indentation
 - Indent using 2 spaces in .vue, .html, and .yml/.yaml files.
