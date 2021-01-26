@@ -134,7 +134,7 @@
 <p class="caption"><span class="caption-text">Topics</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">How-tos and FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#clone-a-course-or-project-for-a-new-term">Clone a Course or Project for a New Term</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clone-a-course-or-project-for-a-new-term">Clone a course or project for a new term</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#let-students-submit-even-if-they-re-not-in-the-roster">Let students submit even if they’re not in the roster</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#restrict-guests-to-your-email-domain-optional-once-per-course">1. Restrict guests to your email domain (Optional, once per course)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#enable-the-anyone-with-the-link-can-submit-project-option">2. Enable the “Anyone with the link can submit” project option</a></li>
@@ -149,6 +149,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#why-do-i-get-permission-denied-when-i-run-my-script-with-my-script-sh">Why do I get “permission denied” when I run my script with <code class="docutils literal notranslate"><span class="pre">./my_script.sh</span></code>?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#can-i-use-matlab">Can I use MATLAB?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-does-my-sandbox-image-build-time-out">Why does my sandbox image build time out?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-happens-if-a-student-has-multiple-best-submissions">What happens if a student has multiple “best” submissions?</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="topics/hard_and_soft_deadlines.html">Hard &amp; Soft Deadlines: Recommendations and Implications</a></li>
@@ -266,7 +267,7 @@
 pull requests to our
 <a class="reference external" href="https://github.com/eecs-autograder/autograder.io/tree/master/docs">GitHub repository</a>.</p>
 <div class="section" id="clone-a-course-or-project-for-a-new-term">
-<h2>Clone a Course or Project for a New Term<a class="headerlink" href="#clone-a-course-or-project-for-a-new-term" title="Permalink to this headline">¶</a></h2>
+<h2>Clone a course or project for a new term<a class="headerlink" href="#clone-a-course-or-project-for-a-new-term" title="Permalink to this headline">¶</a></h2>
 <p>To clone a course, see <a class="reference internal" href="getting_started/set_up_course.html#copy-course"><span class="std std-ref">Copying a Course from a Previous Term</span></a>.</p>
 <p>To clone a project, navigate to the course admin page and click on the
 “Projects” tab. Click the “copy” icon for the project you want to clone.</p>
@@ -371,6 +372,13 @@ the constraints that Autograder.io puts on sandbox images.</p>
 <p>To preserve system integrity, we place a 10 minute time limit and some
 memory and cpu usage limits on image builds.
 See <a class="reference internal" href="topics/custom_sandbox_images.html#image-build-tricks"><span class="std std-ref">here</span></a> for workarounds.</p>
+</div>
+<div class="section" id="what-happens-if-a-student-has-multiple-best-submissions">
+<h2>What happens if a student has multiple “best” submissions?<a class="headerlink" href="#what-happens-if-a-student-has-multiple-best-submissions" title="Permalink to this headline">¶</a></h2>
+<p>This comes up when a project is configured to use the “Best score”
+<a class="reference internal" href="getting_started/create_first_project.html#ultimate-submission-policy"><span class="std std-ref">grading policy</span></a>.
+If a student/group has multiple submissions tied for best
+score, the most recent of those will be selected for their final project grade.</p>
 </div>
 </div>
 
