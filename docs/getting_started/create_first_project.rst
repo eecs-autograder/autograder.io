@@ -66,11 +66,14 @@ Set the timezone for "Reset submissions per day at" to your local timezone
 
 .. image:: /pics/create_first_project/submission_reset_timezone.png
 
+.. _ultimate-submission-policy:
+
 Choose a Grading Policy (Best or Most Recent Submission)
 --------------------------------------------------------
 Choose whether to use students' best or most recent submission for their
 final project grade. We recommend taking the *best* submission when using the
 *hard cutoff* for submission limits or taking the *most recent* submission when
-using the *soft cutoff*.
+using the *soft cutoff*. If handgrading is enabled, the submission chosen for
+their final project grade will also be the one selected for handgrading.
 
 .. image:: /pics/create_first_project/grading_policy.png

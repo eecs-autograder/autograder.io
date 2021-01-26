@@ -4,7 +4,7 @@ This page will be updated as needed. Contributions are welcome through
 pull requests to our
 `GitHub repository <https://github.com/eecs-autograder/autograder.io/tree/master/docs>`_.
 
-Clone a Course or Project for a New Term
+Clone a course or project for a new term
 ------------------------------------------
 To clone a course, see :ref:`copy-course`.
 
@@ -134,3 +134,10 @@ Why does my sandbox image build time out?
 To preserve system integrity, we place a 10 minute time limit and some
 memory and cpu usage limits on image builds.
 See :ref:`here <image-build-tricks>` for workarounds.
+
+What happens if a student has multiple "best" submissions?
+----------------------------------------------------------
+This comes up when a project is configured to use the "Best score"
+:ref:`grading policy <ultimate-submission-policy>`.
+If a student/group has multiple submissions tied for best
+score, the most recent of those will be selected for their final project grade.

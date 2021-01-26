@@ -81,7 +81,10 @@ as Autograder.io doesn't provide any safeguards against this.
 
 Select a submission from the left sidebar, check the appropriate checkboxes,
 add annotations as needed, and then click the "Done" checkbox in the
-bottom-right corner before moving on to the next submission.
+bottom-right corner before moving on to the next submission. The submission
+that is presented for grading is the same one selected for the student's final
+project grade according to the chosen
+:ref:`grading policy <ultimate-submission-policy>`.
 
 .. image:: /pics/topics/handgrading/grading.gif
 
