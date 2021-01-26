@@ -8,6 +8,7 @@ Autograder.io offers:
 - Students can work and submit in groups.
 - Elegant displaying of test results, including output diffs.
 - Flexible grading policy and deadline options.
+- Easily [hand-grade and annotate](https://eecs-autograder.github.io/autograder.io/topics/handgrading.html) student source code for style and code quality.
 
 This repository contains the central [UI documentation](https://eecs-autograder.github.io/autograder.io/) and [issue tracker](https://github.com/eecs-autograder/autograder.io/issues) for Autograder.io.
 
