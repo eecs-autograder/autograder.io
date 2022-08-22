@@ -15,7 +15,7 @@ This repository contains the central [UI documentation](https://eecs-autograder.
 ## For Users
 **Note to students**: If you have a question about your project code or why you see different results on your local machine vs. the autograder, please contact your course staff. Please do not email the Autograder.io team, as the Honor Code prohibits us from offering such assistance.
 
-If you are a new user, please read our [getting started guide]() for basic information on setting up your course and first project.
+If you are a new user, please read our [getting started guide](https://eecs-autograder.github.io/autograder.io/getting_started/set_up_course.html) for basic information on setting up your course and first project.
 
 If you have a question about an existing feature, please see our list of [common topics]() and our [UI documentation](https://eecs-autograder.github.io/autograder.io/). If you can't find your answer there, please contact us at help@autograder.io.
 
