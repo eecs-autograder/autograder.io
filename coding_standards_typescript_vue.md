@@ -1,4 +1,7 @@
 # Typescript/Vue Coding Standards
+Any style conventions described in a repository's README take precedence over this document.
+We are in the process of adding Prettier to the ag-website-vue repository. Please refer
+to that repo's README for when and how to apply Prettier to changes you contribute.
 
 Typescript and Vue projects should use TSLint/ESLint to enforce these standards where possible.
 Extisting projects already have this set up as part of the continuous integration checks.
