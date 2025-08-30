@@ -10,6 +10,7 @@ sphinx = "*"
 sphinx-rtd-theme = "*"
 ghp-import = "*"
 sphinx-copybutton = "*"
+six = "*"
 
 [requires]
 python_version = "3"
