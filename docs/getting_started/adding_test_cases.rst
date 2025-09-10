@@ -28,20 +28,27 @@ you follow this guide. The files can also be found
 .. literalinclude:: ./code_files/student_solution.cpp
     :caption: student_solution.cpp
 
+.. literalinclude:: ./code_files/is_palindrome.py
+    :caption: is_palindrome.py
+
+.. literalinclude:: ./code_files/test_is_palindrome.py
+    :caption: test_is_palindrome.py
+
 Upload Instructor Test Case Files
 ---------------------------------
 In the project admin page, click on the "Instructor Files Tab" and then upload
-the files **test_math_funcs.py**, **print_words_test_1.in**,
-**print_words_test_1.correct**, **print_words_test_2.in**,
-**print_words_test_2.correct** from the previous section.
+the files **test_math_funcs.py**, **test_is_palindrom.py**,
+**print_words_test_1.in**, **print_words_test_1.correct**,
+**print_words_test_2.in**, **print_words_test_2.correct** from the previous
+section.
 
 .. image:: /pics/adding_test_cases/instructor_files.gif
 
 
 Configure Files Students Should Submit
 --------------------------------------
-Click on the "Student Files" tab and add **math_funcs.py** and
-**student_solution.cpp** as expected student files.
+Click on the "Student Files" tab and add **math_funcs.py**,
+**is_palindrome.py**, and **student_solution.cpp** as expected student files.
 
 .. image:: /pics/adding_test_cases/expected_student_files.gif
 
@@ -62,10 +69,11 @@ dialogue that appears, name the suite "Python Tests".
 .. image:: /pics/adding_test_cases/new_test_suite.png
 
 Scroll down to the section labelled "Instructor Files" and select
-**test_math_funcs.py** from the dropdown. Similarly, select **math_funcs.py**
-in the "Student Files" section.
+**test_math_funcs.py** and **test_is_palindrom.py** from the dropdown.
+Similarly, select **math_funcs.py** and **is_palindrome.py** in the
+"Student Files" section.
 
-.. image:: /pics/adding_test_cases/python_suite_instr_files.gif
+.. image:: /pics/adding_test_cases/python_suite_files.gif
 
 Scroll to the bottom of the page and click the "Save" button.
 Since we're using Python, we don't need to use the "setup" option.
@@ -81,13 +89,13 @@ dialogue that appears, name the test "Test Add" and set its command to
 Then, set the following options and click the "save" icon or the "Save" button
 at the bottom of the page.
 
-* **Expected Return Code:** Zero
+* **Correctness and Scoring -> Return Code -> Expected Return Code:** Zero.
   This tells us that the test is "correct" if the exit status of the program is
   zero.
-* **Correct return code:** 2 points
+* **Correctness and Scoring -> Return Code -> Correct return code:** 2 points.
   This tells us that the student's submission will be awarded 2 points for
   exiting with the correct status (zero in this case).
-* **Feedback -> Normal -> Preset:** Pass/Fail
+* **Feedback -> Normal -> Preset:** Pass/Fail.
   This specifies that students will only see whether their code passed this
   test. Output is hidden in order to prevent our test cases from being leaked.
 
@@ -115,8 +123,8 @@ Once the submission is finished grading, we'll want to
 Click on the panel for "Test Add", and you'll see that under "Normal" feedback
 we don't see any output from the test case. Our first test is good to go!
 
-Clone the Test Case to Complete the Suite
-"""""""""""""""""""""""""""""""""""""""""
+Clone the Test Case to Create the Rest of the Math Function Tests
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Rather than creating the rest of our tests from scratch, we'll clone the test
 we made in the previous section and make small changes to the clones. Hover
 over the **...** menu in the "Test Add" panel and click on "Clone test case".
@@ -129,14 +137,41 @@ save button. Repeat this process one more time to create "Test Multiply".
 
 .. image:: /pics/adding_test_cases/python_clone_tests.gif
 
-Head back over to the submission page and submit ``math_funcs.py``. Since
-there's a bug in ``math_funcs.py``, we should see two tests passing and one
-test failing.
+Create One More Python Test Using Custom Scoring
+""""""""""""""""""""""""""""""""""""""""""""""""
+There may be times when you want more control over how many points you assign
+for a test case. The "Custom Scoring" feature allows your test code to assign
+points by outputting a specially formatted string to an output stream.
 
-.. image:: /pics/adding_test_cases/python_all_tests_one_failure.png
+Create a new test case from scratch, naming it "Test Is Palindrome" and set its
+command to ``python3 test_is_palindrome.py``. Then, set the following options
+and click the "save" icon or the "Save" button at the bottom of the page.
 
-Fix the bug in ``math_funcs.py``, submit again, and you should see all three
-tests pass. We now have a fully-working suite of Python unit tests!
+* **Correctness and Scoring -> Custom Scoring -> Enable custom scoring**:
+  checked. This will enable custom scoring, using the default output pattern and
+  parsing the pattern from ``stdout``.
+* **Correctness and Scoring -> Custom Scoring -> Max custom scoring points**: 5
+  points. This specifies that maximum number of points to expect when parsing
+  the score from the output. If a value higher than this is parsed, an error
+  will occur (negative values are allowed, however).
+* **Feedback -> Normal -> Preset:** Pass/Fail. When using custom scoring, this
+  specifies that only the number of points assigned will be shown to students
+  and not the actual output of the test command.
+
+.. image:: /pics/adding_test_cases/python_create_custom_scoring_test.gif
+
+Go back to the submission page and submit ``math_funcs.py`` and
+``is_palindrome.py``. You should two tests passing, one failing, and the latest
+test with partial points. Click on the **"Test Is Palindrome"** test case and
+you should see the actual ``stdout`` output, but when we switch to **"Normal"**
+from the "Adjust Feedback" dropdown menu you'll see that this is hidden from
+students.
+
+.. image:: /pics/adding_test_cases/python_all_tests_results.gif
+
+Fix the bugs in ``math_funcs.py`` and ``is_palindrome.py``, submit again, and
+you should see all four tests pass. We now have a fully-working suite of Python
+unit tests!
 
 Create a Test Suite with C++ Output Tests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -206,5 +241,5 @@ want to show that much information to students. Scroll up and change the
 "Adjust Feedback" dropdown to "Normal" to verify that the diff is hidden from
 students.
 
-Finally, fix the bug in student_solution.cpp, submit ``math_funcs.py`` and
-``student_solution.cpp``, and see all the tests pass!
+Finally, fix the bug in student_solution.cpp, submit ``math_funcs.py``,
+``is_palindrome.py``, and ``student_solution.cpp``, and see all the tests pass!
