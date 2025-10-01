@@ -139,6 +139,8 @@ save button. Repeat this process one more time to create "Test Multiply".
 
 Create One More Python Test Using Custom Scoring
 """"""""""""""""""""""""""""""""""""""""""""""""
+*New in version 2025.08.0*.
+
 There may be times when you want more control over how many points you assign
 for a test case. The "Custom Scoring" feature allows your test code to assign
 points by outputting a specially formatted string to an output stream.
