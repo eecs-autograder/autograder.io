@@ -12,6 +12,11 @@ Autograder.io offers:
 
 This repository contains the central [UI documentation](https://eecs-autograder.github.io/autograder.io/) and [issue tracker](https://github.com/eecs-autograder/autograder.io/issues) for Autograder.io.
 
+## Accessibility
+Autograder.io aims to fully conform to WCAG 2.1 AA accessibility standards. 
+Our [2026.08.0 release](https://github.com/eecs-autograder/autograder-full-stack/releases/tag/2026.08.0) makes significant progress towards this goal (details in the release notes).
+If you encounter any places where the site does not meet these standards, please open an issue in our [issue tracker](https://github.com/eecs-autograder/autograder.io/issues).
+
 ## For Users
 **Note to students**: If you have a question about your project code or why you see different results on your local machine vs. the autograder, please contact your course staff. Please do not email the Autograder.io team, as the Honor Code prohibits us from offering such assistance.
 
